@@ -53,12 +53,12 @@ function FloatingIcon({ position, icon, label }: { position: [number, number, nu
   return (
     <Float speed={floatSpeed} rotationIntensity={0.5} floatIntensity={floatIntensity} position={position}>
       <Html center transform sprite>
-        <div className="flex flex-col items-center justify-center opacity-40 hover:opacity-100 transition-opacity duration-500 cursor-default">
-          <div className="text-brand-primary-red text-4xl drop-shadow-[0_0_15px_rgba(239,68,68,0.8)]">
+        <div className="flex flex-col items-center justify-center opacity-20 hover:opacity-100 transition-opacity duration-500 cursor-default">
+          <div className="text-brand-primary-red text-4xl drop-shadow-[0_0_15px_rgba(239,68,68,0.4)]">
             {icon}
           </div>
           {label && (
-            <span className="mt-2 text-[10px] font-bold tracking-widest text-white/70 uppercase">
+            <span className="mt-2 text-[10px] font-bold tracking-widest text-white/40 uppercase font-mono">
               {label}
             </span>
           )}
@@ -109,7 +109,7 @@ export default function Background3D() {
 
         {/* 1. Large Sphere on FAR Bottom Left */}
         <FloatingWireframe 
-          position={[-8, -5, -4]} 
+          position={[-10, -6, -4]} 
           rotationSpeed={0.05} 
           floatSpeed={1.2}
           opacity={0.12}
@@ -118,7 +118,7 @@ export default function Background3D() {
 
         {/* 2. Large Torus (Donut) on FAR Top Right / Right */}
         <FloatingWireframe 
-          position={[8, 4, -4]} 
+          position={[10, 5, -4]} 
           rotationSpeed={0.03} 
           floatSpeed={1.5}
           opacity={0.15}
@@ -127,7 +127,7 @@ export default function Background3D() {
 
         {/* 3. Small Icosahedron on Top Left corner */}
         <FloatingWireframe 
-          position={[-7, 5, -8]} 
+          position={[-9, 6, -8]} 
           rotationSpeed={0.1} 
           floatSpeed={2}
           opacity={0.2}
@@ -136,7 +136,7 @@ export default function Background3D() {
 
         {/* 4. Small Octahedron on Bottom Right corner */}
         <FloatingWireframe 
-          position={[7, -5, -3]} 
+          position={[9, -6, -3]} 
           rotationSpeed={0.15} 
           floatSpeed={1.8}
           opacity={0.18}
@@ -145,24 +145,24 @@ export default function Background3D() {
 
         {/* 5. Center-ish small polygon - further back and small to leave center clear */}
         <FloatingWireframe 
-          position={[1, -1, -12]} 
+          position={[2, -2, -15]} 
           rotationSpeed={0.08} 
           floatSpeed={1}
           opacity={0.1}
           geometry={<dodecahedronGeometry args={[0.5, 0]} />} 
         />
 
-        {/* -- FLOATING TECH ICONS (MORE CENTRALIZED) -- */}
-        <FloatingIcon position={[-1.2, 0.8, -1]} icon={<SiJavascript />} label="JS" />
-        <FloatingIcon position={[1.8, 1.5, -2]} icon={<SiPython />} label="Python" />
-        <FloatingIcon position={[-2.5, -0.3, -3]} icon={<SiDocker />} label="Docker" />
-        <FloatingIcon position={[2.5, -0.6, -2]} icon={<span className="font-bold text-3xl">n8n</span>} />
-        <FloatingIcon position={[0, 2.5, -4]} icon={<Brain />} label="IA" />
-        <FloatingIcon position={[-0.6, -2.2, -3]} icon={<SiHtml5 />} label="HTML" />
-        <FloatingIcon position={[2.8, -1.8, -5]} icon={<SiCss />} label="CSS" />
-        <FloatingIcon position={[1.2, -1.2, -1]} icon={<SiReact />} label="React" />
-        <FloatingIcon position={[-2.2, -1.8, 0]} icon={<SiMysql />} label="MySQL" />
-        <FloatingIcon position={[0.6, 1.2, -5]} icon={<SiPostgresql />} label="Postgres" />
+        {/* -- FLOATING TECH ICONS (MORE SPREAD OUT) -- */}
+        <FloatingIcon position={[-4.5, 2.5, -2]} icon={<SiJavascript />} label="JS" />
+        <FloatingIcon position={[4.8, 3.5, -3]} icon={<SiPython />} label="Python" />
+        <FloatingIcon position={[-5.5, -1.5, -4]} icon={<SiDocker />} label="Docker" />
+        <FloatingIcon position={[5.5, -2.5, -3]} icon={<span className="font-bold text-3xl">n8n</span>} />
+        <FloatingIcon position={[0, 4.5, -8]} icon={<Brain />} label="IA" />
+        <FloatingIcon position={[-2.5, -4.5, -5]} icon={<SiHtml5 />} label="HTML" />
+        <FloatingIcon position={[5.8, -4.8, -7]} icon={<SiCss />} label="CSS" />
+        <FloatingIcon position={[4.2, -1.2, -2]} icon={<SiReact />} label="React" />
+        <FloatingIcon position={[-6.2, -3.8, -1]} icon={<SiMysql />} label="MySQL" />
+        <FloatingIcon position={[2.6, 4.2, -6]} icon={<SiPostgresql />} label="Postgres" />
 
         <ParticleField />
       </Canvas>

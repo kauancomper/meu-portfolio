@@ -29,7 +29,7 @@ export default function RecentWorks() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-[0.9]"
+            className="text-5xl md:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-[0.9] hero-text-shadow"
           >
             Trabalhos <br />
             <span className="text-white/40">Recentes</span>
@@ -66,13 +66,13 @@ export default function RecentWorks() {
 
               {/* Content */}
               <div className="p-8 pb-10 flex flex-col gap-4">
-                <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-none uppercase">
+                <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight leading-none uppercase hero-text-shadow">
                   {project.title}
                 </h3>
-                <p className="text-sm font-bold text-brand-secondary-red/80 tracking-tight leading-snug">
+                <p className="text-sm font-bold text-brand-secondary-red/90 tracking-tight leading-snug">
                   {project.description}
                 </p>
-                <p className="text-xs text-white/40 leading-relaxed line-clamp-2">
+                <p className="text-sm text-white/50 leading-relaxed line-clamp-2">
                   Extraído do meu GitHub, este projeto foca em soluções escaláveis de {project.category.toLowerCase()}.
                 </p>
 

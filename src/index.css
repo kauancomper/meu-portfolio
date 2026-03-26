@@ -8,14 +8,22 @@
     --foreground: #ffffff;
     --brand-primary-red: #EF4444;
     --brand-secondary-red: #F87171;
+    
+    /* Fluid Typography Tokens */
+    --font-size-hero: clamp(3rem, 10vw, 8rem);
+    --font-size-h2: clamp(2rem, 6vw, 4rem);
+    --font-size-body: clamp(1rem, 2vw, 1.125rem);
   }
 
   body {
     @apply bg-background text-white font-sans overflow-x-hidden antialiased;
-    cursor: none; /* Hide default cursor if not on mobile, but tailwind covers it */
+    cursor: none;
   }
 
-  /* Custom Glow Selection */
+  h1 { font-size: var(--font-size-hero); }
+  h2 { font-size: var(--font-size-h2); }
+  p { font-size: var(--font-size-body); }
+
   ::selection {
     background-color: rgba(239, 68, 68, 0.3);
     color: white;
@@ -24,9 +32,12 @@
 
 @layer utilities {
   .glass-card {
-    @apply bg-white/5 border border-white/10 backdrop-blur-md;
+    @apply bg-white/5 border border-white/10 backdrop-blur-lg;
   }
   .text-glow {
-    text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    text-shadow: 0 0 30px rgba(239, 68, 68, 0.3);
+  }
+  .hero-text-shadow {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   }
 }

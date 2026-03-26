@@ -17,9 +17,9 @@ Sou **Kauan Comper**, desenvolvedor focado em criar soluções inteligentes que 
 
 O portfólio conta com uma experiência visual imersiva e fluida:
 - **Trabalhos Recentes na Home:** Seção de destaque com transparência e efeito de vidro, integrada ao fundo 3D.
-- **Loading Progressivo:** Tela de carregamento centralizada com animações de path-drawing no logo.
-- **Scroll Automático:** Reset de scroll para o topo em cada mudança de rota para melhor navegação.
-- **Micro-interações:** Efeitos de hover e brilho pulsante em elementos-chave.
+- **Menu Mobile High-Fidelity:** Navegação mobile completamente animada com Framer Motion e efeito blur.
+- **Tipografia Fluida:** Textos que se adaptam automaticamente a qualquer tamanho de tela (técnica CSS clamp).
+- **Legibilidade Otimizada:** Ajustes de contraste e sombras de texto para leitura perfeita sobre fundos dinâmicos.
 - **Transições de Página:** Transições suaves de escala e opacidade entre as seções.
 
 ## 🛠️ Tecnologias Utilizadas

@@ -41,9 +41,9 @@ export default function Projects() {
             </div>
             
             <div className="p-8 flex-1 flex flex-col">
-              <div className="text-xs font-mono text-brand-secondary-red mb-3">{project.category}</div>
-              <h4 className="text-2xl font-bold text-white/90 mb-4">{project.title}</h4>
-              <p className="text-white/60 mb-8 flex-1">{project.description}</p>
+              <div className="text-xs font-mono text-brand-secondary-red mb-3 font-bold uppercase tracking-widest">{project.category}</div>
+              <h4 className="text-2xl font-bold text-white mb-4 hero-text-shadow">{project.title}</h4>
+              <p className="text-white/70 mb-8 flex-1 leading-relaxed font-medium">{project.description}</p>
               
               <div className="flex items-center gap-2 text-brand-primary-red font-medium mt-auto transition-transform group-hover:translate-x-2">
                 Ver Estudo de Caso
