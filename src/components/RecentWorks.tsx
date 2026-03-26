@@ -8,7 +8,7 @@ export default function RecentWorks() {
   const { projects } = portfolioContent;
 
   return (
-    <section className="relative w-full py-24 px-6 lg:px-12 bg-black overflow-hidden">
+    <section className="relative w-full py-24 px-6 lg:px-12 overflow-hidden">
       {/* Background Ornaments like in the screenshot */}
       <div className="absolute top-10 right-10 w-64 h-64 border border-white/5 rounded-full pointer-events-none opacity-20" />
       <div className="absolute -bottom-20 -left-20 w-96 h-96 border border-brand-primary-red/10 rounded-full pointer-events-none opacity-10" />
