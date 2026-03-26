@@ -100,7 +100,7 @@ function ParticleField() {
 
 export default function Background3D() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 bg-background">
+    <div className="absolute inset-0 pointer-events-none z-0 bg-black overflow-hidden">
       <Canvas camera={{ position: [0, 0, 10], fov: 45 }}>
         <color attach="background" args={['#000000']} />
         <ambientLight intensity={0.5} />

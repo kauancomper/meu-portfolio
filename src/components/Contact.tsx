@@ -1,18 +1,21 @@
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './Icons';
-
 import { portfolioContent } from '../data/content';
+import Background3D from './Background3D';
 
 export default function Contact() {
   const { contact } = portfolioContent;
 
   return (
-    <section id="contato" className="relative w-full max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col items-center">
+    <section id="contato" className="relative w-full bg-black px-6 pt-28 pb-20 lg:pb-32 flex flex-col items-center overflow-hidden">
+      <Background3D />
+      
+      {/* Glow de fundo da seção Contato */}
+      <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Background Decorative Rings/Glow */}
-      <div className="absolute top-0 right-10 w-64 h-64 bg-brand-primary-red/10 rounded-full blur-[100px] pointer-events-none" />
-
+      <div className="relative z-10 w-full flex flex-col items-center">
       {/* Header */}
       <motion.div
         className="text-center mb-12"
@@ -56,7 +59,7 @@ export default function Contact() {
         transition={{ delay: 0.4 }}
       >
         {/* Email */}
-        <a href={`mailto:${contact.email}`} className="group flex items-center gap-4 p-5 rounded-3xl bg-[#0a0a0a] border border-white/5 hover:border-brand-primary-red/50 transition-colors shadow-lg">
+        <a href={`mailto:${contact.email}`} className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
             <Mail size={18} />
           </div>
@@ -67,7 +70,7 @@ export default function Contact() {
         </a>
 
         {/* LinkedIn */}
-        <a href={contact.linkedin} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-5 rounded-3xl bg-[#0a0a0a] border border-white/5 hover:border-brand-primary-red/50 transition-colors shadow-lg">
+        <a href={contact.linkedin} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
             <LinkedinIcon />
           </div>
@@ -78,7 +81,7 @@ export default function Contact() {
         </a>
 
         {/* GitHub */}
-        <a href={contact.github} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-5 rounded-3xl bg-[#0a0a0a] border border-white/5 hover:border-brand-primary-red/50 transition-colors shadow-lg">
+        <a href={contact.github} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
             <GithubIcon />
           </div>
@@ -89,7 +92,7 @@ export default function Contact() {
         </a>
 
         {/* WhatsApp */}
-        <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-5 rounded-3xl bg-[#0a0a0a] border border-white/5 hover:border-brand-primary-red/50 transition-colors shadow-lg">
+        <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
             <MessageSquare size={18} />
           </div>
@@ -99,6 +102,7 @@ export default function Contact() {
           </div>
         </a>
       </motion.div>
+      </div>
 
     </section>
   );

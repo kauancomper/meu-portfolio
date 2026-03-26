@@ -24,10 +24,11 @@ export default function RecentWorks() {
   const displayRepos = repos.length > 0 ? [...repos, ...repos] : [...portfolioContent.projects.items, ...portfolioContent.projects.items];
 
   return (
-    <section className="relative w-full py-24 overflow-hidden">
-      {/* Background Ornaments */}
-      <div className="absolute top-10 right-10 w-64 h-64 border border-white/5 rounded-full pointer-events-none opacity-20" />
-      <div className="absolute -bottom-20 -left-20 w-96 h-96 border border-brand-primary-red/10 rounded-full pointer-events-none opacity-10" />
+    <section className="relative w-full py-24 overflow-hidden bg-black">
+      
+      {/* Glow de fundo da seção Projetos */}
+      <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="flex flex-col items-center">
         {/* Header Section */}

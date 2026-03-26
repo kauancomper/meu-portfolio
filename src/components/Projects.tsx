@@ -4,6 +4,7 @@ import { portfolioContent } from '../data/content';
 import { ArrowUpRight } from 'lucide-react';
 import { fetchGithubProjects, getRepoLanguageImage } from '../services/github';
 import type { GithubRepo } from '../services/github';
+import Background3D from './Background3D';
 
 export default function Projects() {
   const { projects } = portfolioContent;
@@ -20,7 +21,14 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projetos" className="py-24 px-6 lg:px-12 max-w-7xl mx-auto relative z-10 min-h-screen">
+    <div className="relative w-full min-h-screen bg-black overflow-hidden">
+      <Background3D />
+      
+      {/* Glows de fundo padronizados */}
+      <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+
+      <section id="projetos" className="py-24 px-6 lg:px-12 max-w-7xl mx-auto relative z-10">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -104,5 +112,6 @@ export default function Projects() {
         )}
       </div>
     </section>
+    </div>
   );
 }

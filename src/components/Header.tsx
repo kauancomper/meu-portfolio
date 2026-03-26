@@ -45,10 +45,11 @@ export default function Header() {
           className="flex items-center gap-2 group z-50"
         >
           {/* Logo Mark */}
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-primary-red group-hover:text-brand-secondary-red transition-colors">
-            <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-            <path d="M12 10L6 22H18L12 10Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-          </svg>
+          <img 
+            src="/logokauancomper.svg" 
+            alt="Logo Kauan Comper" 
+            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" 
+          />
           <span className="text-xl font-display font-medium text-white tracking-wide">
             Kauan Comper
           </span>

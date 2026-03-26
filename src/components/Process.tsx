@@ -14,7 +14,7 @@ export default function Process() {
   const { process } = portfolioContent;
 
   return (
-    <section id="processo" className="relative py-24 px-6 lg:px-12 overflow-hidden bg-black/20">
+    <section id="processo" className="relative py-24 px-6 lg:px-12 overflow-hidden bg-black">
       {/* Background Ornaments */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-primary-red/10 rounded-full blur-[120px] pointer-events-none" />
 

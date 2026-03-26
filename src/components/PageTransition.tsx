@@ -14,7 +14,7 @@ export default function PageTransition({ children, path }: PageTransitionProps) 
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.98 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="relative z-10 w-full min-h-screen pt-[100px]"
+      className="relative z-10 w-full min-h-screen"
     >
       {children}
     </motion.div>

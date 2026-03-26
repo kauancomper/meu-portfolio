@@ -25,16 +25,18 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative z-10 w-full pt-16 pb-8 px-6 lg:px-12 border-t border-white/5 bg-black/40 backdrop-blur-xl">
+    <footer className="relative z-10 w-full pt-16 pb-8 px-6 lg:px-12 border-t border-white/5 bg-black">
+
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Logo & Info */}
           <div className="flex flex-col gap-6">
             <Link to="/" className="flex items-center gap-2 group w-fit">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-primary-red group-hover:text-brand-secondary-red transition-colors">
-                <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                <path d="M12 10L6 22H18L12 10Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-              </svg>
+              <img
+                src="/logokauancomper.svg"
+                alt="Logo Kauan Comper"
+                className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]"
+              />
               <span className="text-2xl font-display font-medium text-white tracking-tight">
                 {hero.title_name}
               </span>
@@ -126,11 +128,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] text-center sm:text-left">
-            © {new Date().getFullYear()} {hero.title_name} — {portfolioContent.footer.rights}
+            © {new Date().getFullYear()} {hero.title_name} — Todos os direitos reservados
           </p>
           <div className="flex items-center gap-6">
             <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
-              Feito com prompts <span className="text-brand-primary-red animate-pulse">❤</span> & Vibecoding
+              Feito com prompts <span className="text-brand-primary-red animate-pulse"></span> & Vibecoding
             </p>
           </div>
         </div>

@@ -6,7 +6,6 @@ import LoadingScreen from './components/LoadingScreen';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import Background3D from './components/Background3D';
 import Header from './components/Header';
 
 // Pages
@@ -37,7 +36,6 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen bg-background text-white selection:bg-brand-primary-red/30 font-sans">
-        <Background3D />
         <CustomCursor />
         
         <AnimatePresence mode="wait">
@@ -47,7 +45,7 @@ function App() {
         </AnimatePresence>
 
         <Header />
-        <main className="relative">
+        <main className="relative z-10">
           <AnimatedRoutes />
         </main>
         <Footer />

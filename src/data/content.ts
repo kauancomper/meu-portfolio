@@ -133,8 +133,5 @@ export const portfolioContent = {
     ]
   },
 
-  footer: {
-    built_with: "Construído com código, automação e IA",
-    rights: "© Kauan Comper — Todos os direitos reservados"
-  }
+
 };
