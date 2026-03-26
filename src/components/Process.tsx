@@ -60,12 +60,12 @@ export default function Process() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className={`relative z-10 p-8 glass-card rounded-[2.5rem] flex flex-col gap-6 hover:border-brand-primary-red/30 transition-colors group ${
+                className={`relative z-10 p-4 md:p-8 flex flex-col gap-6 transition-all duration-500 group ${
                   isRight ? 'lg:ml-12' : 'lg:mr-12'
                 }`}
               >
                 {/* Large Background Number */}
-                <span className="absolute -top-6 -left-4 text-8xl font-black text-white/5 pointer-events-none select-none">
+                <span className="absolute -top-10 -left-6 text-[10rem] font-black text-white/5 pointer-events-none select-none group-hover:text-brand-primary-red/10 transition-colors duration-700">
                   {step.id}
                 </span>
 
