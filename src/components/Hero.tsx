@@ -3,6 +3,7 @@ import { portfolioContent } from '../data/content';
 import { ArrowUpRight, Download } from 'lucide-react';
 import kauanImage from '../assets/kauan.png';
 import RecentWorks from './RecentWorks';
+import Process from './Process';
 
 export default function Hero() {
   const { hero } = portfolioContent;
@@ -129,6 +130,7 @@ export default function Hero() {
       </div>
     </section>
     <RecentWorks />
+    <Process />
     </>
   );
 }

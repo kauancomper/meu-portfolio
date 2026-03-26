@@ -97,6 +97,41 @@ export const portfolioContent = {
     github: "https://github.com/kauancomper",
     whatsapp: "https://api.whatsapp.com/send/?phone=5594992239540"
   },
+  process: {
+    title: "Diferente de tudo que você já viu",
+    subtitle: "MEU PROCESSO",
+    description: "Uma metodologia estruturada que une design estratégico, desenvolvimento técnico e inteligência artificial. Design engineering de ponta-a-ponta de verdade.",
+    steps: [
+      {
+        id: "01",
+        title: "Briefing & PRD",
+        description: "Levantamento completo de requisitos, Personas, Jornadas do usuário, arquitetura da informação, análise de stakeholders e documentação detalhada do produto através de PRD estruturado.",
+        tags: ["Research", "Documentation", "Strategy"],
+        icon: "FileText"
+      },
+      {
+        id: "02",
+        title: "Branding, Fundamentos de design e Design System",
+        description: "Branding alinhado à construção de fundamentos sólidos de design com tokens, variables, componentes e padrões escaláveis, garantindo consistência e manutenibilidade.",
+        tags: ["Figma", "Tokens", "Variables", "Components"],
+        icon: "Layers"
+      },
+      {
+        id: "03",
+        title: "Prototipagem & Vibecoding",
+        description: "Prototipagem de alta fidelidade para testes mais assertivos e reais antes de construir qualquer linha de código. Integração via MCP do Figma com Claude code e Cursor para handoff perfeito ou desenvolvimento avançado com código de alta qualidade. Nada de Protótipos estáticos e sem interação.",
+        tags: ["Figma", "Prototype", "Handoff", "Code"],
+        icon: "Monitor"
+      },
+      {
+        id: "04",
+        title: "Manutenção e análise de dados",
+        description: "Manutenção contínua, análise de dados, SEO, acessibilidade, testes de usabilidade, testes A/B e otimização para garantir que seu produto esteja sempre evoluindo e performando da melhor maneira. E o melhor: encontrando problemas antes deles acontecerem.",
+        tags: ["Research", "Analytics", "User Testing", "Code"],
+        icon: "TrendingUp"
+      }
+    ]
+  },
   footer: {
     built_with: "Feito com prompt & Vibecoding",
     rights: "Todos os direitos reservados"
