@@ -37,12 +37,15 @@ export default function Process() {
         </motion.div>
 
         <div className="relative flex flex-col lg:grid lg:grid-cols-2 gap-x-12 gap-y-12 lg:gap-y-16 items-center">
-          {/* Central Image - Displayed with different sizes for mobile/desktop */}
-          <div className="lg:absolute left-1/2 top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-0 opacity-30 lg:opacity-40 mb-12 lg:mb-0">
+          {/* Central Image - Color version with red glow */}
+          <div className="lg:absolute left-1/2 top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-0 mb-12 lg:mb-0 relative">
+            {/* Red Glow Light Effect */}
+            <div className="absolute inset-0 bg-brand-primary-red/30 rounded-full blur-[100px] scale-150 -z-10 pointer-events-none" />
+            
             <motion.img
               src={kauanImage}
               alt="Kauan"
-              className="w-[250px] md:w-[320px] lg:w-[400px] grayscale filter mx-auto"
+              className="w-[250px] md:w-[320px] lg:w-[400px] mx-auto filter brightness-110 relative z-10"
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
             />
