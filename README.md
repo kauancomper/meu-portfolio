@@ -13,6 +13,13 @@ Sou **Kauan Comper**, desenvolvedor focado em criar soluções inteligentes que 
 - **Especialidades:** Automação Web, Bots, Integração de APIs, IA aplicada (OpenAI/Agentes), Backend e Sistemas Web.
 - **Destaque:** +2 anos de experiência e +10 soluções desenvolvidas.
 
+## ✨ Experiência Visual e Animações
+
+O portfólio conta com uma experiência visual imersiva e fluida:
+- **Loading Progressivo:** Tela de carregamento centralizada com animações de path-drawing no logo.
+- **Micro-interações:** Efeitos de hover e brilho pulsante em elementos-chave.
+- **Transições de Página:** Transições suaves de escala e opacidade entre as seções.
+
 ## 🛠️ Tecnologias Utilizadas
 
 O projeto foi construído utilizando as seguintes tecnologias:
