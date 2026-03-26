@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, ExternalLink } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { portfolioContent } from '../data/content';
 import { Link } from 'react-router-dom';
+import { GithubIcon } from './Icons';
 
 export default function RecentWorks() {
   const { projects } = portfolioContent;
@@ -77,10 +78,10 @@ export default function RecentWorks() {
 
                 <div className="flex items-center gap-4 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <a href={project.link} className="p-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-                    <Github size={18} className="text-white" />
+                    <GithubIcon size={18} className="text-white" />
                   </a>
                   <a href={project.link} className="p-3 bg-white/5 rounded-full hover:bg-white/10 transition-colors">
-                    <ExternalLink size={18} className="text-white" />
+                    <ArrowUpRight size={18} className="text-white" />
                   </a>
                 </div>
               </div>
