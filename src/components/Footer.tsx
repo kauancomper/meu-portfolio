@@ -1,0 +1,140 @@
+import { portfolioContent } from '../data/content';
+import { Link } from 'react-router-dom';
+import { MessageSquare, Mail, ArrowUp } from 'lucide-react';
+
+const LinkedinIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+    <rect x="2" y="9" width="4" height="12" />
+    <circle cx="4" cy="4" r="2" />
+  </svg>
+);
+
+const GithubIcon = ({ size = 18 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.1-.34 6.36-1.54 6.36-7a5.2 5.2 0 0 0-1.5-3.78c.15-.38.65-1.8-.15-3.78 0 0-1.2-.38-3.9 1.45a13.4 13.4 0 0 0-7 0c-2.7-1.83-3.9-1.45-3.9-1.45-.8 1.98-.3 3.4-.15 3.78a5.2 5.2 0 0 0-1.5 3.78c0 5.42 3.2 6.66 6.3 7 0 0 0 0 0 0A4.8 4.8 0 0 0 8 18v4" />
+    <path d="M9 18c-4.5 1.5-5.5-2-7-2" />
+  </svg>
+);
+
+export default function Footer() {
+  const { contact, hero, nav } = portfolioContent;
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="relative z-10 w-full pt-16 pb-8 px-6 lg:px-12 border-t border-white/5 bg-black/40 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          {/* Logo & Info */}
+          <div className="flex flex-col gap-6">
+            <Link to="/" className="flex items-center gap-2 group w-fit">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-primary-red group-hover:text-brand-secondary-red transition-colors">
+                <path d="M12 2L2 22H22L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+                <path d="M12 10L6 22H18L12 10Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+              </svg>
+              <span className="text-2xl font-display font-medium text-white tracking-tight">
+                {hero.title_name}
+              </span>
+            </Link>
+            <p className="text-white/40 text-sm leading-relaxed max-w-xs font-medium">
+              {hero.subtitle}
+            </p>
+            <div className="flex items-center gap-3 bg-white/5 border border-white/10 w-fit px-4 py-2 rounded-full">
+              <div className="w-1.5 h-1.5 rounded-full bg-brand-primary-red animate-pulse shadow-[0_0_10px_#EF4444]" />
+              <span className="text-white/60 text-[10px] font-mono uppercase tracking-widest font-bold">
+                {hero.badge_label}
+              </span>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex flex-col gap-8">
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">Navegação</h4>
+            <nav className="flex flex-col gap-4">
+              {[
+                { label: nav.home, path: '/' },
+                { label: nav.about, path: '/sobre' },
+                { label: nav.projects, path: '/projetos' },
+                { label: nav.contact, path: '/contato' },
+              ].map((item) => (
+                <Link 
+                  key={item.path} 
+                  to={item.path} 
+                  className="text-white/40 hover:text-white text-sm transition-all w-fit hover:translate-x-1"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact Details */}
+          <div className="flex flex-col gap-8">
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">Canais Sociais</h4>
+            <div className="flex flex-col gap-5">
+              <a href={contact.email} className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
+                <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
+                  <Mail size={16} />
+                </div>
+                E-mail
+              </a>
+              <a href={contact.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
+                <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
+                  <LinkedinIcon size={16} />
+                </div>
+                LinkedIn
+              </a>
+              <a href={contact.github} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
+                <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
+                  <GithubIcon size={16} />
+                </div>
+                GitHub
+              </a>
+              <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
+                <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
+                  <MessageSquare size={16} />
+                </div>
+                WhatsApp
+              </a>
+            </div>
+          </div>
+
+          {/* CTA / Quick Actions */}
+          <div className="flex flex-col gap-8 lg:items-end">
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em] lg:text-right w-full">Configurações</h4>
+            <button 
+              onClick={scrollToTop}
+              className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group w-fit"
+            >
+              <span className="text-xs font-bold text-white/50 group-hover:text-white transition-colors">Voltar ao Topo</span>
+              <div className="w-6 h-6 rounded-lg bg-brand-primary-red/10 flex items-center justify-center group-hover:animate-bounce">
+                <ArrowUp size={14} className="text-brand-primary-red" />
+              </div>
+            </button>
+            <Link 
+              to="/contato" 
+              className="px-8 py-4 rounded-2xl bg-brand-primary-red text-white hover:bg-brand-secondary-red transition-all text-xs font-bold w-fit shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)]"
+            >
+              VAMOS TRABALHAR?
+            </Link>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] text-center sm:text-left">
+            © {new Date().getFullYear()} {hero.title_name} — {portfolioContent.footer.rights}
+          </p>
+          <div className="flex items-center gap-6">
+            <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
+              Built with <span className="text-brand-primary-red animate-pulse">❤</span> & Vibecoding
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
