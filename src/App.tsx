@@ -6,6 +6,8 @@ import LoadingScreen from './components/LoadingScreen';
 import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import Background3D from './components/Background3D';
+import Header from './components/Header';
 
 // Pages
 import Hero from './components/Hero';

@@ -16,6 +16,7 @@ Sou **Kauan Comper**, desenvolvedor focado em criar soluções inteligentes que 
 ## ✨ Experiência Visual e Animações
 
 O portfólio conta com uma experiência visual imersiva e fluida:
+- **Trabalhos Recentes na Home:** Seção de destaque logo após o hero com os últimos projetos.
 - **Loading Progressivo:** Tela de carregamento centralizada com animações de path-drawing no logo.
 - **Scroll Automático:** Reset de scroll para o topo em cada mudança de rota para melhor navegação.
 - **Micro-interações:** Efeitos de hover e brilho pulsante em elementos-chave.

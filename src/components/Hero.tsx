@@ -2,11 +2,13 @@ import { motion } from 'framer-motion';
 import { portfolioContent } from '../data/content';
 import { ArrowUpRight, Download } from 'lucide-react';
 import kauanImage from '../assets/kauan.png';
+import RecentWorks from './RecentWorks';
 
 export default function Hero() {
   const { hero } = portfolioContent;
 
   return (
+    <>
     <section id="hero" className="relative min-h-screen flex items-center pt-24 pb-16 px-6 lg:px-12 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] max-w-[800px] max-h-[800px] bg-brand-primary-red/10 rounded-full blur-[100px] pointer-events-none" />
@@ -126,5 +128,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  );
-}
+    <RecentWorks />
+</>
