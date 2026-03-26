@@ -60,9 +60,9 @@ export default function Footer() {
                 { label: nav.projects, path: '/projetos' },
                 { label: nav.contact, path: '/contato' },
               ].map((item) => (
-                <Link 
-                  key={item.path} 
-                  to={item.path} 
+                <Link
+                  key={item.path}
+                  to={item.path}
                   className="text-white/40 hover:text-white text-sm transition-all w-fit hover:translate-x-1"
                 >
                   {item.label}
@@ -105,7 +105,7 @@ export default function Footer() {
           {/* CTA / Quick Actions */}
           <div className="flex flex-col gap-8 lg:items-end">
             <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em] lg:text-right w-full">Configurações</h4>
-            <button 
+            <button
               onClick={scrollToTop}
               className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group w-fit"
             >
@@ -114,8 +114,8 @@ export default function Footer() {
                 <ArrowUp size={14} className="text-brand-primary-red" />
               </div>
             </button>
-            <Link 
-              to="/contato" 
+            <Link
+              to="/contato"
               className="px-8 py-4 rounded-2xl bg-brand-primary-red text-white hover:bg-brand-secondary-red transition-all text-xs font-bold w-fit shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)]"
             >
               VAMOS TRABALHAR?
@@ -130,7 +130,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">
-              Built with <span className="text-brand-primary-red animate-pulse">❤</span> & Vibecoding
+              Feito com prompts <span className="text-brand-primary-red animate-pulse">❤</span> & Vibecoding
             </p>
           </div>
         </div>

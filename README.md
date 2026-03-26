@@ -17,6 +17,7 @@ Sou **Kauan Comper**, desenvolvedor focado em criar soluções inteligentes que 
 
 O portfólio conta com uma experiência visual imersiva e fluida:
 - **Loading Progressivo:** Tela de carregamento centralizada com animações de path-drawing no logo.
+- **Scroll Automático:** Reset de scroll para o topo em cada mudança de rota para melhor navegação.
 - **Micro-interações:** Efeitos de hover e brilho pulsante em elementos-chave.
 - **Transições de Página:** Transições suaves de escala e opacidade entre as seções.
 

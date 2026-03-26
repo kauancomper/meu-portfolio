@@ -1,12 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import CustomCursor from './components/CustomCursor';
-import Background3D from './components/Background3D';
-import Header from './components/Header';
 import PageTransition from './components/PageTransition';
 import LoadingScreen from './components/LoadingScreen';
+import ScrollToTop from './components/ScrollToTop';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 // Pages
 import Hero from './components/Hero';
@@ -34,6 +33,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-background text-white selection:bg-brand-primary-red/30 font-sans">
         <Background3D />
         <CustomCursor />
