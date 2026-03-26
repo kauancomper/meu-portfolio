@@ -26,14 +26,12 @@ export async function fetchGithubProjects(): Promise<GithubRepo[]> {
     
     const data: GithubRepo[] = await response.json();
     
-    // Filtragem refinada:
+    // Filtragem:
     // 1. Remove o repositório do perfil (kauancomper/kauancomper)
-    // 2. Remove forks (opcional, mas geralmente melhor para portfólio)
-    // 3. Garante que tenha descrição ou seja um dos projetos principais que vimos
+    // 2. Remove forks
     const filtered = data.filter((repo: any) => 
       repo.name.toLowerCase() !== GITHUB_USERNAME.toLowerCase() && 
-      !repo.fork &&
-      (repo.description || repo.stargazers_count > 0)
+      !repo.fork
     );
 
     return filtered;

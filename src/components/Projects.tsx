@@ -39,7 +39,7 @@ export default function Projects() {
           Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="h-[400px] bg-white/5 rounded-3xl animate-pulse" />
           ))
-        ) : (
+        ) : repos.length > 0 ? (
           repos.map((repo, idx) => (
             <motion.a
               href={repo.html_url}
@@ -78,6 +78,28 @@ export default function Projects() {
                 </div>
               </div>
             </motion.a>
+          ))
+        ) : (
+          // Fallback static items
+          portfolioContent.projects.items.map((project, idx) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 * idx }}
+              className="group relative flex flex-col glass-card rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-4 hover:shadow-[0_0_30px_rgba(239,68,68,0.2)] hover:border-brand-primary-red/50 block cursor-pointer"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-500" />
+              </div>
+              <div className="p-8 flex-1 flex flex-col">
+                <div className="text-xs font-mono text-brand-secondary-red mb-3 font-bold uppercase tracking-widest">{project.category}</div>
+                <h4 className="text-2xl font-black text-white mb-4 hero-text-shadow uppercase">{project.title}</h4>
+                <p className="text-white/70 mb-8 flex-1 leading-relaxed font-medium">{project.description}</p>
+              </div>
+            </motion.div>
           ))
         )}
       </div>

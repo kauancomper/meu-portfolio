@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { portfolioContent } from '../data/content';
 import { FileText, Layers, Monitor, TrendingUp } from 'lucide-react';
-import kauanImage from '../assets/kauan.png';
+import kauanImage from '../assets/sesssaoprocesso.png';
 
 const iconMap: Record<string, any> = {
   FileText: FileText,
@@ -17,9 +17,9 @@ export default function Process() {
     <section id="processo" className="relative py-24 px-6 lg:px-12 overflow-hidden bg-black/20">
       {/* Background Ornaments */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-brand-primary-red/10 rounded-full blur-[120px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -39,9 +39,9 @@ export default function Process() {
         <div className="relative flex flex-col lg:grid lg:grid-cols-2 gap-x-12 gap-y-12 lg:gap-y-16 items-center">
           {/* Central Image - Displayed with different sizes for mobile/desktop */}
           <div className="lg:absolute left-1/2 top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-0 opacity-30 lg:opacity-40 mb-12 lg:mb-0">
-            <motion.img 
-              src={kauanImage} 
-              alt="Kauan" 
+            <motion.img
+              src={kauanImage}
+              alt="Kauan"
               className="w-[250px] md:w-[320px] lg:w-[400px] grayscale filter mx-auto"
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
@@ -51,8 +51,8 @@ export default function Process() {
           {process.steps.map((step, idx) => {
             const IconComponent = iconMap[step.icon];
             // Determine alignment classes based on index for the 2x2 grid
-            const isRight = idx % 2 !== 0; 
-            
+            const isRight = idx % 2 !== 0;
+
             return (
               <motion.div
                 key={step.id}
@@ -60,9 +60,8 @@ export default function Process() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className={`relative z-10 p-4 md:p-8 flex flex-col gap-6 transition-all duration-500 group ${
-                  isRight ? 'lg:ml-12' : 'lg:mr-12'
-                }`}
+                className={`relative z-10 p-4 md:p-8 flex flex-col gap-6 transition-all duration-500 group ${isRight ? 'lg:ml-12' : 'lg:mr-12'
+                  }`}
               >
                 {/* Large Background Number */}
                 <span className="absolute -top-10 -left-6 text-[10rem] font-black text-white/5 pointer-events-none select-none group-hover:text-brand-primary-red/10 transition-colors duration-700">
