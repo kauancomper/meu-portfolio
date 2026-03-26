@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { portfolioContent } from '../data/content';
 import { ArrowUpRight, Download } from 'lucide-react';
-import kauanImage from '../assets/kauan.png';
 import RecentWorks from './RecentWorks';
 import Process from './Process';
+import heroVideo from '../assets/videoanimacaohero.mp4';
 
 export default function Hero() {
   const { hero } = portfolioContent;
@@ -96,12 +96,15 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6 }}
             className="relative z-10 lg:mr-12"
           >
-            <motion.img 
-              src={kauanImage} 
-              alt="Kauan Comper"
+            <motion.video 
+              src={heroVideo} 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="w-[280px] lg:w-[450px] object-contain drop-shadow-[0_0_50px_rgba(239,68,68,0.3)] filter grayscale hover:grayscale-0 transition-all duration-700"
+              className="w-[300px] lg:w-[480px] rounded-[2rem] object-cover shadow-[0_0_60px_rgba(239,68,68,0.25)] border border-white/10 relative z-10"
             />
 
             {/* Floating Stats Card */}
