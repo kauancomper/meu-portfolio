@@ -54,6 +54,14 @@ O projeto foi construído utilizando as seguintes tecnologias:
 - **LinkedIn:** [linkedin.com/in/kauan-comper/](https://linkedin.com/in/kauan-comper/)
 - **WhatsApp:** [Agendar Chamada](https://api.whatsapp.com/send/?phone=5594992239540)
 
+## 🛠️ Resolução de Problemas (Troubleshooting)
+
+### Erros de Build no Deploy (Netlify/Vercel)
+Este projeto utiliza TypeScript e Vite. Se o deploy falhar, verifique:
+1. **Case Sensitivity:** Certifique-se de que as importações correspondem exatamente aos nomes dos arquivos (ex: `Contact.tsx` não pode ser importado como `contact.tsx`).
+2. **TypeScript:** O comando de build (`npm run build`) executa `tsc -b`. Certifique-se de que não há erros de tipagem no código antes de subir.
+3. **Versão do Node:** Recomenda-se utilizar Node 18+.
+
 ---
 *Feito com prompt & Vibecoding*
 
