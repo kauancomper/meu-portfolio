@@ -44,7 +44,8 @@ export const REPO_DESCRIPTIONS: Record<string, Record<Language, { highlight: str
       highlight: 'Rediseño completo de un portafolio profesional para un cliente.',
       detail: 'Implementación de automatización com Playwright para extracción de datos y arquitetura basada en Docker para facilitar el despliegue.'
     },
-    image: '/portfolio-jn.png'
+    image: '/portfolio-jn.png',
+    url: 'https://www.jordaonunes.com.br/'
   },
   'portfolio_JordaoNunes': {
     pt: {
@@ -59,7 +60,8 @@ export const REPO_DESCRIPTIONS: Record<string, Record<Language, { highlight: str
       highlight: 'Ecosistema digital enfocado en branding y presencia profesional.',
       detail: 'Integración de feeds dinámicos y arquitectura limpia desarrollada para escalar la presencia digital del profesional Jordão Nunes.'
     },
-    image: '/portfolio-jn.png'
+    image: '/portfolio-jn.png',
+    url: 'https://www.jordaonunes.com.br/'
   },
   'BDII-TGI': {
     pt: {
