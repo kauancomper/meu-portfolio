@@ -81,7 +81,7 @@ export default function Hero() {
                   {content.description}
                 </p>
 
-                <div className="flex flex-wrap gap-3 py-4 border-y border-white/5">
+                <div className="flex flex-wrap gap-3 py-4">
                   {content.skills.split(' • ').map((skill, index) => (
                     <motion.div
                       key={index}
