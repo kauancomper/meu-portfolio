@@ -59,6 +59,9 @@ export interface PortfolioContent {
   projects: {
     page_title: string;
     page_subtitle: string;
+    title_line1: string;
+    title_line2: string;
+    description: string;
     view_project: string;
     items: ProjectItem[];
   };
@@ -111,7 +114,15 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
         { category: "Ferramentas", items: ["Git", "PostgreSQL", "Tailwind CSS", "Framer Motion"] }
       ]
     },
-    projects: { page_title: "PROJETOS", page_subtitle: "Vitrine Tecnológica", view_project: "Explorar Projeto", items: [] },
+    projects: { 
+      page_title: "PROJETOS", 
+      page_subtitle: "Vitrine Tecnológica", 
+      title_line1: "MEUS", 
+      title_line2: "PROJETOS", 
+      description: "Uma coleção de soluções técnicas, automações e sistemas desenvolvidos para resolver problemas reais e escalar operações.", 
+      view_project: "Explorar Projeto", 
+      items: [] 
+    },
     recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabalhos", title_part2: "Recentes", view_all: "Ver Todos no GitHub" },
     process: {
       title: "MUITO ALÉM DE DESENVOLVIMENTO", subtitle: "Metodologia de Trabalho",
@@ -151,7 +162,15 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
         { category: "Tools", items: ["Git", "PostgreSQL", "Tailwind CSS", "Framer Motion"] }
       ]
     },
-    projects: { page_title: "PROJECTS", page_subtitle: "Tech Showcase", view_project: "Explore Project", items: [] },
+    projects: { 
+      page_title: "PROJECTS", 
+      page_subtitle: "Tech Showcase", 
+      title_line1: "MY", 
+      title_line2: "PROJECTS", 
+      description: "A collection of technical solutions, automations, and systems developed to solve real-world problems and scale operations.", 
+      view_project: "Explore Project", 
+      items: [] 
+    },
     recent_works: { subtitle: "GitHub Showcase", title_part1: "Recent", title_part2: "Works", view_all: "View All on GitHub" },
     process: {
       title: "MUCH BEYOND DEVELOPMENT", subtitle: "Working Methodology",
@@ -191,7 +210,15 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
         { category: "Herramientas", items: ["Git", "PostgreSQL", "Tailwind CSS", "Framer Motion"] }
       ]
     },
-    projects: { page_title: "PROYECTOS", page_subtitle: "Vitrina Tecnológica", view_project: "Explorar Proyecto", items: [] },
+    projects: { 
+      page_title: "PROYECTOS", 
+      page_subtitle: "Vitrina Tecnológica", 
+      title_line1: "MIS", 
+      title_line2: "PROYECTOS", 
+      description: "Una colección de soluciones técnicas, automatizaciones y sistemas desarrollados para resolver problemas reales y escalar operaciones.", 
+      view_project: "Explorar Proyecto", 
+      items: [] 
+    },
     recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabajos", title_part2: "Recientes", view_all: "Ver Todos en GitHub" },
     process: {
       title: "MUCHO MÁS ALLÁ DEL DESARROLLO", subtitle: "Metodología de Trabajo",

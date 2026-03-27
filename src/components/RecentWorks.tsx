@@ -6,6 +6,7 @@ import { GithubIcon } from './Icons';
 import { fetchGithubProjects, getRepoLanguageImage } from '../services/github';
 import type { GithubRepo } from '../services/github';
 import { useLanguage } from '../context/LanguageContext';
+import { REPO_DESCRIPTIONS } from '../data/projectsData';
 
 export default function RecentWorks() {
   const { t, language } = useLanguage();
@@ -25,12 +26,6 @@ export default function RecentWorks() {
 // Duplicate for infinite marquee
 const displayRepos = repos.length > 0 ? [...repos, ...repos, ...repos] : [];
 
-const REPO_IMAGES: Record<string, string> = {
-  'portfolio_jn_redesign': '/portfolio-jn.png',
-  'portfolio_JordaoNunes': '/portfolio-jn.png',
-  'BDII-TGI': '/apache-imobiliaria.png',
-  'tg1bdi': '/apache-imobiliaria.png' // Suporte para variação de nome
-};
 
   return (
     <section id="recent-works" className="relative w-full py-24 overflow-hidden bg-black">
@@ -83,7 +78,7 @@ const REPO_IMAGES: Record<string, string> = {
                   {/* Image Container */}
                   <div className="relative aspect-[4/3] overflow-hidden">
                     <img 
-                      src={REPO_IMAGES[item.name] || getRepoLanguageImage(item.language)} 
+                      src={REPO_DESCRIPTIONS[item.name]?.image || getRepoLanguageImage(item.language)} 
                       alt={item.name} 
                       className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 font-bold"
                     />
@@ -103,7 +98,7 @@ const REPO_IMAGES: Record<string, string> = {
                       {item.name.replace(/_/g, ' ')}
                     </h3>
                     <p className="text-sm font-bold text-brand-secondary-red/90 tracking-tight leading-snug line-clamp-2">
-                      {item.description || (language === 'pt' ? 'Projeto desenvolvido com foco em performance e automação inteligente.' : 'Project developed with focus on performance and intelligent automation.')}
+                      {REPO_DESCRIPTIONS[item.name]?.[language]?.highlight || item.description || (language === 'pt' ? 'Projeto desenvolvido com foco em performance e automação inteligente.' : 'Project developed with focus on performance and intelligent automation.')}
                     </p>
 
                     <div className="flex items-center gap-4 mt-auto pt-4">
