@@ -111,7 +111,7 @@ export default function Footer() {
                 </a>
                 <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
                   <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
-                    <MessageSquare size={16} />
+                    <WhatsappIcon size={16} />
                   </div>
                   WhatsApp
                 </a>
