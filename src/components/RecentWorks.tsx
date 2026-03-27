@@ -80,7 +80,7 @@ const displayRepos = repos.length > 0 ? [...repos, ...repos, ...repos] : [];
                     <img 
                       src={REPO_DESCRIPTIONS[item.name]?.image || getRepoLanguageImage(item.language)} 
                       alt={item.name} 
-                      className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 font-bold"
+                      className="w-full h-full object-cover transition-all duration-700 font-bold group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-90" />
                     
