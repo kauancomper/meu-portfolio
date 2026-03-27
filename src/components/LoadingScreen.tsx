@@ -25,40 +25,28 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
             }}
           />
           
-          {/* The VN Logo - Animated scale and rotate */}
+          {/* Logo Kauan Comper - Animated scale */}
           <motion.div
-            initial={{ scale: 0.8, opacity: 0, rotate: -10 }}
-            animate={{ scale: 1, opacity: 1, rotate: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="relative z-10"
           >
-            <svg width="120" height="120" viewBox="0 0 268 267" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative z-10">
-              <path 
-                d="M153 165.5L238 25.5H267L153 207.5L55 45.5H38L146 220.5L132.5 241.5L0 25.5H68L153 165.5ZM153.5 140.5L140 120L185.5 45.5H169.5L132.5 106L83.5 25.5H224L153.5 140.5ZM121.25 46.5L132.505 66.5L144.25 46.5H121.25Z" 
-                stroke="#EF4444" 
-                strokeWidth="3" 
-                fill="#EF4444" 
-                fillOpacity="0"
-              >
-                <motion.path
-                  initial={{ pathLength: 0, fillOpacity: 0 }}
-                  animate={{ pathLength: 1, fillOpacity: 1 }}
-                  transition={{ 
-                    pathLength: { duration: 1.5, ease: "easeInOut" },
-                    fillOpacity: { delay: 1.5, duration: 0.5 }
-                  }}
-                />
-              </path>
-            </svg>
+            <img 
+              src="/logokauancomper.svg" 
+              alt="Logo Kauan Comper" 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain drop-shadow-[0_0_20px_rgba(239,68,68,0.5)]" 
+            />
           </motion.div>
         </div>
 
         <motion.div 
-          className="font-display text-brand-secondary-red text-sm tracking-[0.3em] font-bold"
-          initial={{ opacity: 0, y: 10, letterSpacing: "0.1em" }}
-          animate={{ opacity: 1, y: 0, letterSpacing: "0.3em" }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          className="font-display text-brand-secondary-red text-sm md:text-base tracking-[0.4em] font-bold uppercase"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
         >
-          CARREGANDO
+          Iniciando Experiência
         </motion.div>
       </div>
     </motion.div>

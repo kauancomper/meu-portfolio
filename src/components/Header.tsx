@@ -6,8 +6,18 @@ import { Menu, X } from 'lucide-react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const currentPath = location.pathname;
+
+  // Detectar scroll para aplicar background no Header
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Fechar o menu ao mudar de página
   useEffect(() => {
@@ -32,12 +42,18 @@ export default function Header() {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 py-4 px-6 lg:px-12 pointer-events-none"
+      className="fixed top-0 left-0 right-0 z-50 pointer-events-none"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.5, type: 'spring', stiffness: 120 }}
     >
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between pointer-events-auto">
+      {/* Background overlay on scroll */}
+      <div
+        className={`absolute inset-0 transition-all duration-300 pointer-events-auto ${isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-white/5 shadow-2xl' : 'bg-transparent'
+          }`}
+      />
+
+      <div className="max-w-[1400px] mx-auto flex items-center justify-between pointer-events-auto relative z-10 py-5 px-6 lg:px-12">
 
         {/* Left: Logo */}
         <Link
@@ -45,10 +61,10 @@ export default function Header() {
           className="flex items-center gap-2 group z-50"
         >
           {/* Logo Mark */}
-          <img 
-            src="/logokauancomper.svg" 
-            alt="Logo Kauan Comper" 
-            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]" 
+          <img
+            src="/logokauancomper.svg"
+            alt="Logo Kauan Comper"
+            className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)]"
           />
           <span className="text-xl font-display font-medium text-white tracking-wide">
             Kauan Comper
@@ -84,7 +100,6 @@ export default function Header() {
             <button className="text-white hover:text-brand-primary-red transition-colors">PT</button>
             <button className="text-white/40 hover:text-white transition-colors">EN</button>
             <button className="text-white/40 hover:text-white transition-colors">ES</button>
-            <button className="text-white/40 hover:text-white transition-colors">CS</button>
           </div>
 
           <Link
@@ -96,7 +111,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-white p-2 z-50 relative pointer-events-auto"
         >

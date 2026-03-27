@@ -3,6 +3,7 @@ import { portfolioContent } from '../data/content';
 import { Briefcase, Wrench, Code, Cpu } from 'lucide-react';
 import profilePhoto from '../assets/sessaosobre.png';
 import Background3D from './Background3D';
+import AmbientGlows from './AmbientGlows';
 
 export default function About() {
   const { about } = portfolioContent;
@@ -20,9 +21,8 @@ export default function About() {
     <section id="sobre" className="relative py-28 px-6 lg:px-12 bg-black overflow-hidden">
       <Background3D />
       
-      {/* Glow de fundo da seção Sobre */}
-      <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* Glow de fundo componentizado */}
+      <AmbientGlows />
 
       <div className="max-w-7xl mx-auto relative z-10">
 
@@ -51,6 +51,8 @@ export default function About() {
                 src={profilePhoto}
                 alt="Kauan Comper"
                 className="w-full h-auto object-cover object-center"
+                loading="lazy"
+                decoding="async"
               />
               {/* Overlay gradiente natural */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

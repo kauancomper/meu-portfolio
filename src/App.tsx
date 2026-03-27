@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import PageTransition from './components/PageTransition';
 import LoadingScreen from './components/LoadingScreen';
 import ScrollToTop from './components/ScrollToTop';
@@ -8,11 +8,11 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Header from './components/Header';
 
-// Pages
-import Hero from './components/Hero';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+// Pages lazily loaded to drastically reduce initial JS bundle size
+const Hero = lazy(() => import('./components/Hero'));
+const About = lazy(() => import('./components/About'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -20,10 +20,10 @@ function AnimatedRoutes() {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<PageTransition path="/"><Hero /></PageTransition>} />
-        <Route path="/sobre" element={<PageTransition path="/sobre"><About /></PageTransition>} />
-        <Route path="/projetos" element={<PageTransition path="/projetos"><Projects /></PageTransition>} />
-        <Route path="/contato" element={<PageTransition path="/contato"><Contact /></PageTransition>} />
+        <Route path="/" element={<PageTransition path="/"><Suspense fallback={null}><Hero /></Suspense></PageTransition>} />
+        <Route path="/sobre" element={<PageTransition path="/sobre"><Suspense fallback={null}><About /></Suspense></PageTransition>} />
+        <Route path="/projetos" element={<PageTransition path="/projetos"><Suspense fallback={null}><Projects /></Suspense></PageTransition>} />
+        <Route path="/contato" element={<PageTransition path="/contato"><Suspense fallback={null}><Contact /></Suspense></PageTransition>} />
       </Routes>
     </AnimatePresence>
   );

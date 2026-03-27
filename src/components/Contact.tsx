@@ -3,6 +3,7 @@ import { Mail, MessageSquare } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './Icons';
 import { portfolioContent } from '../data/content';
 import Background3D from './Background3D';
+import AmbientGlows from './AmbientGlows';
 
 export default function Contact() {
   const { contact } = portfolioContent;
@@ -11,9 +12,8 @@ export default function Contact() {
     <section id="contato" className="relative w-full bg-black px-6 pt-28 pb-20 lg:pb-32 flex flex-col items-center overflow-hidden">
       <Background3D />
       
-      {/* Glow de fundo da seção Contato */}
-      <div className="absolute top-0 right-10 w-[600px] h-[600px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-primary-red/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* Glow de fundo componentizado */}
+      <AmbientGlows />
 
       <div className="relative z-10 w-full flex flex-col items-center">
       {/* Header */}
@@ -45,6 +45,7 @@ export default function Contact() {
             width="100%"
             height="100%"
             frameBorder="0"
+            loading="lazy"
             className="absolute inset-0 w-full h-full bg-white relative z-10"
           ></iframe>
         }

@@ -24,6 +24,8 @@ export default function Hero() {
           transition={{ duration: 2 }}
           className="w-full h-full object-cover opacity-60"
         />
+        {/* Dark overlay to reduce video brightness */}
+        <div className="absolute inset-0 bg-black/60" />
         {/* Protection Masks */}
         {/* 1. Left to Right Fade (Hides video text on the left) */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent lg:via-black/40" />
