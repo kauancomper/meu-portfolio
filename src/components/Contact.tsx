@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare } from 'lucide-react';
-import { LinkedinIcon, GithubIcon } from './Icons';
+import { Mail } from 'lucide-react';
+import { LinkedinIcon, GithubIcon, WhatsappIcon } from './Icons';
 import { useLanguage } from '../context/LanguageContext';
 import Background3D from './Background3D';
 import AmbientGlows from './AmbientGlows';
@@ -98,7 +98,7 @@ export default function Contact() {
         {/* WhatsApp */}
         <a href={contact.whatsapp} target="_blank" rel="noreferrer" className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
-            <MessageSquare size={18} />
+            <WhatsappIcon size={18} />
           </div>
           <div>
             <p className="text-[10px] font-bold text-white/40 tracking-widest mb-0.5 uppercase">Whatsapp</p>
