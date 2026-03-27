@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { portfolioContent } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import { Briefcase, Wrench, Code, Cpu } from 'lucide-react';
 import profilePhoto from '../assets/sessaosobre.png';
 import Background3D from './Background3D';
 import AmbientGlows from './AmbientGlows';
 
 export default function About() {
-  const { about } = portfolioContent;
+  const { t } = useLanguage();
+  const { about } = t;
 
   const getIconForCategory = (category: string) => {
     switch (category) {
@@ -68,19 +69,19 @@ export default function About() {
               <div className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-4 flex items-center gap-8">
                 <div>
                   <p className="text-[10px] font-mono text-white/40 uppercase tracking-[0.3em] mb-0.5">
-                    {portfolioContent.hero.exp_label}
+                    {t.hero.exp_label}
                   </p>
                   <p className="text-2xl font-black text-white">
-                    {portfolioContent.hero.exp_value}
+                    {t.hero.exp_value}
                   </p>
                 </div>
                 <div className="w-px self-stretch bg-white/10" />
                 <div>
                   <p className="text-[10px] font-mono text-white/40 uppercase tracking-[0.3em] mb-0.5">
-                    {portfolioContent.hero.projects_label}
+                    {t.hero.projects_label}
                   </p>
                   <p className="text-2xl font-black text-white">
-                    {portfolioContent.hero.projects_value}
+                    {t.hero.projects_value}
                   </p>
                 </div>
               </div>

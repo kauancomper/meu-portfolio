@@ -1,4 +1,4 @@
-import { portfolioContent } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import { Link } from 'react-router-dom';
 import { MessageSquare, Mail, ArrowUp } from 'lucide-react';
 
@@ -18,7 +18,8 @@ const GithubIcon = ({ size = 18 }) => (
 );
 
 export default function Footer() {
-  const { contact, hero, nav } = portfolioContent;
+  const { t, language } = useLanguage();
+  const { contact, hero, nav } = t;
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -54,7 +55,9 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">Navegação</h4>
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">
+              {language === 'pt' ? 'Navegação' : language === 'es' ? 'Navegación' : 'Navigation'}
+            </h4>
             <nav className="flex flex-col gap-4">
               {[
                 { label: nav.home, path: '/' },
@@ -75,7 +78,9 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="flex flex-col gap-8">
-            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">Canais Sociais</h4>
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em]">
+              {language === 'pt' ? 'Canais Sociais' : language === 'es' ? 'Canales Sociales' : 'Social Channels'}
+            </h4>
             <div className="flex flex-col gap-5">
               <a href={contact.email} className="flex items-center gap-3 text-white/40 hover:text-white transition-all text-sm group w-fit">
                 <div className="w-8 h-8 rounded-xl bg-white/5 flex items-center justify-center group-hover:bg-brand-primary-red/20 group-hover:text-brand-primary-red transition-all">
@@ -106,12 +111,16 @@ export default function Footer() {
 
           {/* CTA / Quick Actions */}
           <div className="flex flex-col gap-8 lg:items-end">
-            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em] lg:text-right w-full">Configurações</h4>
+            <h4 className="text-white/90 font-bold text-[10px] uppercase tracking-[0.3em] lg:text-right w-full">
+              {language === 'pt' ? 'Configurações' : language === 'es' ? 'Ajustes' : 'Settings'}
+            </h4>
             <button
               onClick={scrollToTop}
               className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group w-fit"
             >
-              <span className="text-xs font-bold text-white/50 group-hover:text-white transition-colors">Voltar ao Topo</span>
+              <span className="text-xs font-bold text-white/50 group-hover:text-white transition-colors">
+                {language === 'pt' ? 'Voltar ao Topo' : language === 'es' ? 'Volver al Inicio' : 'Back to Top'}
+              </span>
               <div className="w-6 h-6 rounded-lg bg-brand-primary-red/10 flex items-center justify-center group-hover:animate-bounce">
                 <ArrowUp size={14} className="text-brand-primary-red" />
               </div>
@@ -120,7 +129,7 @@ export default function Footer() {
               to="/contato"
               className="px-8 py-4 rounded-2xl bg-brand-primary-red text-white hover:bg-brand-secondary-red transition-all text-xs font-bold w-fit shadow-[0_0_20px_rgba(239,68,68,0.2)] hover:shadow-[0_0_30px_rgba(239,68,68,0.4)]"
             >
-              VAMOS TRABALHAR?
+              {language === 'pt' ? 'VAMOS TRABALHAR?' : language === 'es' ? '¿VAMOS A TRABAJAR?' : 'LET\'S WORK?'}
             </Link>
           </div>
         </div>
@@ -128,7 +137,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
           <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] text-center sm:text-left">
-            © {new Date().getFullYear()} {hero.title_name} — Todos os direitos reservados
+            © {new Date().getFullYear()} {hero.title_name} — {language === 'pt' ? 'Todos os direitos reservados' : language === 'es' ? 'Todos los derechos reservados' : 'All rights reserved'}
           </p>
           <div className="flex items-center gap-6">
             <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] flex items-center gap-2">

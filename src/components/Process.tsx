@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion';
-import { portfolioContent } from '../data/content';
-import { FileText, Layers, Monitor, TrendingUp } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { FileText, Layers, Monitor, TrendingUp, Search, Code } from 'lucide-react';
 import kauanImage from '../assets/sesssaoprocesso.png';
 
 const iconMap: Record<string, any> = {
-  FileText: FileText,
+  Search: Search,
   Layers: Layers,
-  Monitor: Monitor,
+  Code: Code,
   TrendingUp: TrendingUp,
+  FileText: FileText,
+  Monitor: Monitor,
 };
 
 export default function Process() {
-  const { process } = portfolioContent;
+  const { t } = useLanguage();
+  const { process } = t;
 
   return (
     <section id="processo" className="relative py-24 px-6 lg:px-12 overflow-hidden bg-black">
@@ -36,11 +39,10 @@ export default function Process() {
           </p>
         </motion.div>
 
-        {/* Layout alterado: usamos gap-x-[350px] e xl:gap-x-[450px] para empurrar as colunas de texto para os lados, abrindo espaço no centro */}
+        {/* Layout: Central Image and steps around */}
         <div className="relative flex flex-col lg:grid lg:grid-cols-2 lg:gap-x-[350px] xl:gap-x-[450px] gap-y-12 lg:gap-y-24 items-center">
           {/* Central Image - Color version with red glow */}
           <div className="lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-0 mb-12 lg:mb-0 relative flex justify-center items-center pointer-events-none w-full">
-            {/* Efeito de luz vermelho/rosado intenso */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] md:w-[350px] md:h-[350px] bg-brand-primary-red/50 md:bg-brand-primary-red/40 rounded-full blur-[100px] -z-10" />
             
             <motion.div
@@ -60,9 +62,8 @@ export default function Process() {
             </motion.div>
           </div>
 
-          {process.steps.map((step, idx) => {
+          {process.steps.map((step: any, idx: number) => {
             const IconComponent = iconMap[step.icon];
-            // Determine alignment classes based on index for the 2x2 grid
             const isRight = idx % 2 !== 0;
 
             return (
@@ -101,7 +102,7 @@ export default function Process() {
                 </div>
 
                 <div className={`flex flex-wrap gap-2 mt-2 w-full ${isRight ? 'justify-start lg:justify-end' : 'justify-start'}`}>
-                  {step.tags.map(tag => (
+                  {step.tags.map((tag: string) => (
                     <span key={tag} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[10px] font-mono text-white/40 uppercase tracking-wider">
                       {tag}
                     </span>

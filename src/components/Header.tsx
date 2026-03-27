@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { portfolioContent } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 export default function Header() {
+  const { t, language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
@@ -34,10 +35,10 @@ export default function Header() {
   }, [isOpen]);
 
   const navItems = [
-    { id: '/', label: portfolioContent.nav.home },
-    { id: '/sobre', label: portfolioContent.nav.about },
-    { id: '/projetos', label: portfolioContent.nav.projects },
-    { id: '/contato', label: portfolioContent.nav.contact },
+    { id: '/', label: t.nav.home },
+    { id: '/sobre', label: t.nav.about },
+    { id: '/projetos', label: t.nav.projects },
+    { id: '/contato', label: t.nav.contact },
   ];
 
   return (
@@ -97,16 +98,31 @@ export default function Header() {
         {/* Right: Language & CTA (Desktop) */}
         <div className="hidden md:flex items-center gap-4">
           <div className="flex items-center gap-3 bg-white/5 border border-white/10 backdrop-blur-md rounded-full px-5 py-2.5 text-xs font-mono font-medium">
-            <button className="text-white hover:text-brand-primary-red transition-colors">PT</button>
-            <button className="text-white/40 hover:text-white transition-colors">EN</button>
-            <button className="text-white/40 hover:text-white transition-colors">ES</button>
+            <button 
+              onClick={() => setLanguage('pt')}
+              className={`transition-colors ${language === 'pt' ? 'text-white font-bold' : 'text-white/40 hover:text-white'}`}
+            >
+              PT
+            </button>
+            <button 
+              onClick={() => setLanguage('en')}
+              className={`transition-colors ${language === 'en' ? 'text-white font-bold' : 'text-white/40 hover:text-white'}`}
+            >
+              EN
+            </button>
+            <button 
+              onClick={() => setLanguage('es')}
+              className={`transition-colors ${language === 'es' ? 'text-white font-bold' : 'text-white/40 hover:text-white'}`}
+            >
+              ES
+            </button>
           </div>
 
           <Link
             to="/contato"
             className="bg-brand-primary-red hover:bg-brand-secondary-red text-white font-semibold text-sm px-6 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(239,68,68,0.4)] hover:shadow-[0_0_25px_rgba(239,68,68,0.6)]"
           >
-            Contato
+            {t.nav.contact}
           </Link>
         </div>
 
@@ -153,10 +169,14 @@ export default function Header() {
               </div>
 
               <div className="mt-auto pt-12 border-t border-white/10">
-                <p className="text-xs font-mono text-white/20 uppercase tracking-widest mb-6">Contatos e Idiomas</p>
+                <p className="text-xs font-mono text-white/20 uppercase tracking-widest mb-6">{language === 'pt' ? 'Contatos e Idiomas' : language === 'en' ? 'Contact and Language' : 'Contacto e Idioma'}</p>
                 <div className="flex flex-wrap gap-4 mb-8">
-                  {['PT', 'EN', 'ES', 'CS'].map(lang => (
-                    <button key={lang} className={`text-xl font-bold ${lang === 'PT' ? 'text-white' : 'text-white/30'}`}>
+                  {(['pt', 'en', 'es'] as const).map(lang => (
+                    <button 
+                      key={lang} 
+                      onClick={() => setLanguage(lang)}
+                      className={`text-xl font-bold uppercase ${lang === language ? 'text-white' : 'text-white/30'}`}
+                    >
                       {lang}
                     </button>
                   ))}
@@ -165,7 +185,7 @@ export default function Header() {
                   to="/contato"
                   className="block w-full text-center bg-brand-primary-red py-6 rounded-3xl text-2xl font-black uppercase tracking-tighter"
                 >
-                  Vamos Conversar!
+                  {t.nav.contact === 'Contact' ? 'Let\'s Talk!' : t.nav.contact === 'Contacto' ? '¡Hablemos!' : 'Vamos Conversar!'}
                 </Link>
               </div>
             </motion.div>

@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
 import { Mail, MessageSquare } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './Icons';
-import { portfolioContent } from '../data/content';
+import { useLanguage } from '../context/LanguageContext';
 import Background3D from './Background3D';
 import AmbientGlows from './AmbientGlows';
 
 export default function Contact() {
-  const { contact } = portfolioContent;
+  const { t, language } = useLanguage();
+  const { contact } = t;
 
   return (
     <section id="contato" className="relative w-full bg-black px-6 pt-28 pb-20 lg:pb-32 flex flex-col items-center overflow-hidden">
@@ -39,16 +40,14 @@ export default function Contact() {
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
       >
-        {
-          <iframe
-            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1pUkCT7hMwD7UGU5JZhPv-9-A0FRk6jDSkJzcTP-Os4_n8D9SqTInXRpbyZulCkGXs1jtW-Bmq?gv=true"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            loading="lazy"
-            className="absolute inset-0 w-full h-full bg-white relative z-10"
-          ></iframe>
-        }
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1pUkCT7hMwD7UGU5JZhPv-9-A0FRk6jDSkJzcTP-Os4_n8D9SqTInXRpbyZulCkGXs1jtW-Bmq?gv=true"
+          width="100%"
+          height="100%"
+          frameBorder="0"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full bg-white relative z-10"
+        ></iframe>
       </motion.div>
 
       {/* Bottom Contact Cards Grid */}
@@ -60,13 +59,15 @@ export default function Contact() {
         transition={{ delay: 0.4 }}
       >
         {/* Email */}
-        <a href={`mailto:${contact.email}`} className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
+        <a href={contact.email} className="group flex items-center gap-4 p-3 pr-6 rounded-full bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 hover:border-brand-primary-red/50 transition-all shadow-lg">
           <div className="w-12 h-12 rounded-full flex items-center justify-center bg-brand-primary-red/10 text-brand-primary-red group-hover:bg-brand-primary-red group-hover:text-white transition-colors">
             <Mail size={18} />
           </div>
           <div>
             <p className="text-[10px] font-bold text-white/40 tracking-widest mb-0.5 uppercase">E-mail</p>
-            <p className="text-xs font-bold text-white/90">Enviar E-mail</p>
+            <p className="text-xs font-bold text-white/90">
+              {language === 'pt' ? 'Enviar E-mail' : language === 'es' ? 'Enviar Email' : 'Send Email'}
+            </p>
           </div>
         </a>
 
@@ -77,7 +78,9 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-[10px] font-bold text-white/40 tracking-widest mb-0.5 uppercase">Linkedin</p>
-            <p className="text-xs font-bold text-white/90">Acessar Perfil</p>
+            <p className="text-xs font-bold text-white/90">
+              {language === 'pt' ? 'Acessar Perfil' : language === 'es' ? 'Ver Perfil' : 'Visit Profile'}
+            </p>
           </div>
         </a>
 
@@ -88,7 +91,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-[10px] font-bold text-white/40 tracking-widest mb-0.5 uppercase">Github</p>
-            <p className="text-xs font-bold text-white/90">/Portfólio-2026</p>
+            <p className="text-xs font-bold text-white/90">/kauancomper</p>
           </div>
         </a>
 
@@ -99,7 +102,9 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-[10px] font-bold text-white/40 tracking-widest mb-0.5 uppercase">Whatsapp</p>
-            <p className="text-xs font-bold text-white/90">Enviar Mensagem</p>
+            <p className="text-xs font-bold text-white/90">
+              {language === 'pt' ? 'Enviar Mensagem' : language === 'es' ? 'Enviar Mensaje' : 'Send Message'}
+            </p>
           </div>
         </a>
       </motion.div>
