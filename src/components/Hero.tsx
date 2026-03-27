@@ -81,10 +81,20 @@ export default function Hero() {
                   {content.description}
                 </p>
 
-                <div className="flex flex-wrap gap-x-6 gap-y-2 py-4 border-y border-white/5">
-                   <div className="text-[10px] font-black text-brand-secondary-red uppercase tracking-[0.3em] opacity-80">
-                      {content.skills}
-                   </div>
+                <div className="flex flex-wrap gap-3 py-4 border-y border-white/5">
+                  {content.skills.split(' • ').map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 + (index * 0.1) }}
+                      className="px-4 py-2 rounded-full bg-brand-primary-red/10 backdrop-blur-md border border-brand-primary-red/20 flex items-center justify-center"
+                    >
+                      <span className="text-[10px] font-black text-brand-secondary-red uppercase tracking-[0.2em]">
+                        {skill}
+                      </span>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
             </div>
