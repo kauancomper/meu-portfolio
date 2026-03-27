@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-6">
+          <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-6">
             <p className="text-white/20 text-[9px] font-mono uppercase tracking-[0.2em] text-center sm:text-left">
               © {new Date().getFullYear()} {hero.title_name} — {language === 'pt' ? 'Todos os direitos reservados' : language === 'es' ? 'Todos los derechos reservados' : 'All rights reserved'}
             </p>
