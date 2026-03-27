@@ -47,7 +47,7 @@ export const REPO_DESCRIPTIONS: Record<string, Record<Language, { highlight: str
     image: '/portfolio-jn.png',
     url: 'https://www.jordaonunes.com.br/'
   },
-  'portfolio_JordaoNunes': {
+  'portfolio_jordaonunes': {
     pt: {
       highlight: 'Ecossistema digital focado em branding e presença profissional.',
       detail: 'Integração de feeds dinâmicos e arquitetura limpa desenvolvida para escalar a presença digital do profissional Jordão Nunes.'
@@ -58,7 +58,7 @@ export const REPO_DESCRIPTIONS: Record<string, Record<Language, { highlight: str
     },
     es: {
       highlight: 'Ecosistema digital enfocado en branding y presencia profesional.',
-      detail: 'Integración de feeds dinámicos y arquitectura limpia desarrollada para escalar la presencia digital del profesional Jordão Nunes.'
+      detail: 'Integración de feeds dinámicos y arquitectura limpia desarrollada para escalar a presença digital do profissional Jordão Nunes.'
     },
     image: '/portfolio-jn.png',
     url: 'https://www.jordaonunes.com.br/'

@@ -64,7 +64,7 @@ export default function Projects() {
           ) : repos.length > 0 ? (
             repos.map((repo, idx) => (
               <motion.a
-                href={repo.html_url}
+                href={REPO_DESCRIPTIONS[repo.name]?.url || repo.html_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 key={repo.id}
