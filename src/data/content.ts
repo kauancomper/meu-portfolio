@@ -123,7 +123,7 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
       view_project: "Explorar Projeto", 
       items: [] 
     },
-    recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabalhos", title_part2: "Recentes", view_all: "Ver Todos no GitHub" },
+    recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabalhos", title_part2: "Recentes", view_all: "ver todos os projetos" },
     process: {
       title: "MUITO ALÉM DE DESENVOLVIMENTO", subtitle: "Metodologia de Trabalho",
       description: "Uma metodologia focada em automação, sistemas escaláveis e inteligência artificial. Do diagnóstico ao deploy, cada etapa é pensada para eliminar processos manuais e gerar eficiência real no seu negócio.",
@@ -171,7 +171,7 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
       view_project: "Explore Project", 
       items: [] 
     },
-    recent_works: { subtitle: "GitHub Showcase", title_part1: "Recent", title_part2: "Works", view_all: "View All on GitHub" },
+    recent_works: { subtitle: "GitHub Showcase", title_part1: "Recent", title_part2: "Works", view_all: "view all projects" },
     process: {
       title: "MUCH BEYOND DEVELOPMENT", subtitle: "Working Methodology",
       description: "A methodology focused on automation, scalable systems, and artificial intelligence. From diagnosis to deployment, each step is designed to eliminate manual processes and generate real efficiency.",
@@ -219,7 +219,7 @@ export const portfolioContent: Record<Language, PortfolioContent> = {
       view_project: "Explorar Proyecto", 
       items: [] 
     },
-    recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabajos", title_part2: "Recientes", view_all: "Ver Todos en GitHub" },
+    recent_works: { subtitle: "GitHub Showcase", title_part1: "Trabajos", title_part2: "Recientes", view_all: "ver todos los proyectos" },
     process: {
       title: "MUCHO MÁS ALLÁ DEL DESARROLLO", subtitle: "Metodología de Trabajo",
       description: "Una metodología enfocada en automatización, sistemas escalables e inteligencia artificial. Del diagnóstico al despliegue, cada paso está diseñado para eliminar procesos manuales.",
