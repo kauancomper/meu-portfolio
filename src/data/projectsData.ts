@@ -13,7 +13,8 @@ export const REPO_DESCRIPTIONS: Record<string, Record<Language, { highlight: str
     es: {
       highlight: 'Portafolio de alto rendimiento con React, Vite y Framer Motion.',
       detail: 'Desarrollo enfocado en diseño premium, animaciones fluidas y optimización extrema de Core Web Vitals para una experiencia senior.'
-    }
+    },
+    image: '/capa-portfolio.png'
   },
   'portfolio_kc': {
     pt: {
