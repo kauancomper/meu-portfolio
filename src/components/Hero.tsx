@@ -36,12 +36,20 @@ export default function Hero() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="flex items-center gap-3"
+                className="flex flex-wrap items-center gap-6"
               >
-                <div className="w-2 h-2 rounded-full bg-brand-primary-red animate-pulse" />
-                <span className="text-brand-secondary-red font-mono text-xs tracking-[0.4em] uppercase font-bold">
-                  {content.badge_label}
-                </span>
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-brand-primary-red animate-pulse" />
+                  <span className="text-brand-secondary-red font-mono text-xs tracking-[0.4em] uppercase font-bold">
+                    {content.badge_label}
+                  </span>
+                </div>
+                
+                <div className="hidden md:flex items-center gap-4 text-white/40 font-mono text-[10px] uppercase tracking-widest border-l border-white/10 pl-6">
+                  <span>{content.location}</span>
+                  <div className="w-1 h-1 rounded-full bg-white/20" />
+                  <span>{content.remote}</span>
+                </div>
               </motion.div>
 
               <motion.div
@@ -72,6 +80,12 @@ export default function Hero() {
                 <p className="text-white/70 text-base md:text-lg max-w-xl leading-relaxed font-medium">
                   {content.description}
                 </p>
+
+                <div className="flex flex-wrap gap-x-6 gap-y-2 py-4 border-y border-white/5">
+                   <div className="text-[10px] font-black text-brand-secondary-red uppercase tracking-[0.3em] opacity-80">
+                      {content.skills}
+                   </div>
+                </div>
               </motion.div>
             </div>
           </div>
