@@ -105,8 +105,8 @@ const displayRepos = repos.length > 0 ? [...repos, ...repos, ...repos] : [];
                       <a href={item.html_url} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-primary-red transition-all">
                         <GithubIcon size={18} className="text-white" />
                       </a>
-                      {item.homepage && (
-                        <a href={item.homepage} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-primary-red transition-all">
+                      {(item.homepage || REPO_DESCRIPTIONS[item.name]?.url) && (
+                        <a href={REPO_DESCRIPTIONS[item.name]?.url || item.homepage} target="_blank" rel="noopener noreferrer" className="p-3 bg-white/5 rounded-full hover:bg-brand-primary-red transition-all">
                           <ArrowUpRight size={18} className="text-white" />
                         </a>
                       )}
