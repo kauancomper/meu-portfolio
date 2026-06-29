@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "repoName": "meu-portfolio",
+      "coverImage": "/capa-portfolio.png",
+      "liveUrl": "https://www.kauancomper.com.br",
+      "tools": ["React", "TypeScript", "Vite", "Framer Motion", "Tailwind CSS", "Three.js"],
+      "screenshots": [],
+      "pt": {
+        "name": "Portfólio Kauan Comper",
+        "highlight": "Portfólio de alta performance com React, Vite e Framer Motion.",
+        "detail": "Desenvolvimento focado em design premium, animações fluidas e otimização extrema de Core Web Vitals para uma experiência sênior."
+      },
+      "en": {
+        "name": "Kauan Comper Portfolio",
+        "highlight": "High-performance portfolio with React, Vite, and Framer Motion.",
+        "detail": "Development focused on premium design, fluid animations, and extreme Core Web Vitals optimization for a senior experience."
+      },
+      "es": {
+        "name": "Portafolio Kauan Comper",
+        "highlight": "Portafolio de alto rendimiento con React, Vite y Framer Motion.",
+        "detail": "Desarrollo enfocado en diseño premium, animaciones fluidas y optimización extrema de Core Web Vitals para una experiencia senior."
+      }
+    },
+    {
+      "repoName": "portfolio_jn_redesign",
+      "coverImage": "/portfolio-jn.png",
+      "liveUrl": "https://www.jordaonunes.com.br/",
+      "tools": ["React", "TypeScript", "Playwright", "Docker", "Node.js"],
+      "screenshots": [],
+      "pt": {
+        "name": "Portfólio Jordão Nunes",
+        "highlight": "Redesign completo de portfólio profissional para cliente.",
+        "detail": "Implementação de automação com Playwright para extração de dados e arquitetura baseada em Docker para facilitação de deploy."
+      },
+      "en": {
+        "name": "Jordão Nunes Portfolio",
+        "highlight": "Complete redesign of a professional portfolio for a client.",
+        "detail": "Implementation of automation with Playwright for data extraction and Docker-based architecture for easy deployment."
+      },
+      "es": {
+        "name": "Portafolio Jordão Nunes",
+        "highlight": "Rediseño completo de un portafolio profesional para un cliente.",
+        "detail": "Implementación de automatización com Playwright para extracción de datos y arquitectura basada en Docker para facilitar el despliegue."
+      }
+    },
+    {
+      "repoName": "BDII-TGI",
+      "coverImage": "/apache-imobiliaria.png",
+      "liveUrl": "",
+      "tools": ["FastAPI", "Python", "PostgreSQL", "Docker", "SQLAlchemy"],
+      "screenshots": [],
+      "pt": {
+        "name": "Sistema Imobiliário",
+        "highlight": "Sistema de Gestão Imobiliária robusto com FastAPI e Postgres.",
+        "detail": "Mapeamento ORM complexo, modelagem de banco de dados relacional e containerização completa para ambiente de desenvolvimento."
+      },
+      "en": {
+        "name": "Real Estate System",
+        "highlight": "Robust Real Estate Management System with FastAPI and Postgres.",
+        "detail": "Complex ORM mapping, relational database modeling, and full containerization for a development environment."
+      },
+      "es": {
+        "name": "Sistema Inmobiliario",
+        "highlight": "Sistema de Gestión Inmobiliaria robusto con FastAPI y Postgres.",
+        "detail": "Mapeo ORM complejo, modelado de bases de datos relacionales y contenedorización completa para el entorno de desarrollo."
+      }
+    }
+  ]
+}
