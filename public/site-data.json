@@ -1,0 +1,402 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "repoName": "meu-portfolio",
+      "coverImage": "/meuportfollio.png",
+      "liveUrl": "https://kauancomper.vercel.app",
+      "tools": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Framer Motion",
+        "Tailwind CSS",
+        "Three.js"
+      ],
+      "screenshots": [
+        "/meuportfollio.png"
+      ],
+      "pt": {
+        "name": "Portfólio Kauan Comper",
+        "highlight": "Mais do que um portfólio, uma demonstração da minha forma de desenvolver software.",
+        "detail": "Todo o código-fonte deste projeto está disponível no GitHub. Desenvolvido com React, Vite e Framer Motion, o portfólio foi estruturado seguindo boas práticas de engenharia de software, com foco em arquitetura modular, componentes reutilizáveis, desempenho e uma experiência moderna para o usuário."
+      },
+      "en": {
+        "name": "Kauan Comper Portfolio",
+        "highlight": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 19 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+        "detail": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 19 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+      },
+      "es": {
+        "name": "Portafolio Kauan Comper",
+        "highlight": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 19 MINUTES 18 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE",
+        "detail": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 19 MINUTES 26 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+      }
+    },
+    {
+      "repoName": "portfolio_jn_redesign",
+      "coverImage": "/jordaonunes.png",
+      "liveUrl": "https://www.jordaonunes.com.br/",
+      "tools": [
+        "React",
+        "TypeScript",
+        "Playwright",
+        "Docker",
+        "Node.js"
+      ],
+      "screenshots": [
+        "/jordaonunes.png"
+      ],
+      "pt": {
+        "name": "Portfólio Jordão Nunes",
+        "highlight": "Redesign completo de portfólio profissional para cliente.",
+        "detail": "Implementação de automação com Playwright para extração de dados e arquitetura baseada em Docker para facilitação de deploy."
+      },
+      "en": {
+        "name": "Jordão Nunes Portfolio",
+        "highlight": "Complete redesign of a professional portfolio for a client.",
+        "detail": "Implementation of automation with Playwright for data extraction and Docker-based architecture for easy deployment."
+      },
+      "es": {
+        "name": "Portafolio Jordão Nunes",
+        "highlight": "Rediseño completo de un portafolio profesional para un cliente.",
+        "detail": "Implementación de automatización com Playwright para extracción de datos y arquitectura basada en Docker para facilitar el despliegue."
+      }
+    },
+    {
+      "repoName": "BDII-TGI",
+      "coverImage": "/apache-imobiliaria.png",
+      "liveUrl": "",
+      "tools": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "Docker",
+        "SQLAlchemy"
+      ],
+      "screenshots": [
+        "/apache-imobiliaria.png"
+      ],
+      "pt": {
+        "name": "Sistema Imobiliário",
+        "highlight": "Sistema de Gestão Imobiliária robusto com FastAPI e Postgres.",
+        "detail": "Mapeamento ORM complexo, modelagem de banco de dados relacional e containerização completa para ambiente de desenvolvimento."
+      },
+      "en": {
+        "name": "Real Estate System",
+        "highlight": "Robust Real Estate Management System with FastAPI and Postgres.",
+        "detail": "Complex ORM mapping, relational database modeling, and full containerization for a development environment."
+      },
+      "es": {
+        "name": "Sistema Inmobiliario",
+        "highlight": "Sistema de Gestión Inmobiliaria robusto con FastAPI y Postgres.",
+        "detail": "Mapeo ORM complejo, modelado de bases de datos relacionales y contenedorización completa para el entorno de desarrollo."
+      }
+    },
+    {
+      "repoName": "FortunaSys",
+      "coverImage": "/fortunasys.png",
+      "liveUrl": "https://fortunasys.vercel.app/",
+      "tools": [
+        "HTML",
+        "JAVASCRIPT ",
+        "CSS",
+        "SUPABASE"
+      ],
+      "screenshots": [
+        "/fortunasys.png"
+      ],
+      "pt": {
+        "name": "FortunaSys",
+        "highlight": "Plataforma completa para gerenciar toda a operação de um bingo, da venda das cartelas ao encerramento do sorteio.",
+        "detail": "FortunaSys é um sistema web desenvolvido para gerenciar de forma integrada todas as etapas da operação de um bingo. A aplicação reúne módulos de controle de cartelas, vendas, clientes, vendedores e sorteios, automatizando processos que tradicionalmente eram realizados manualmente. O projeto foi arquitetado para oferecer desempenho, escalabilidade e facilidade de manutenção, demonstrando minha abordagem no desenvolvimento de sistemas completos voltados para problemas reais."
+      },
+      "en": {
+        "name": "FortunaSys",
+        "highlight": "",
+        "detail": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 32 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+      },
+      "es": {
+        "name": "FortunaSys",
+        "highlight": "",
+        "detail": "MYMEMORY WARNING: YOU USED ALL AVAILABLE FREE TRANSLATIONS FOR TODAY. NEXT AVAILABLE IN  04 HOURS 32 MINUTES 19 SECONDS VISIT HTTPS://MYMEMORY.TRANSLATED.NET/DOC/USAGELIMITS.PHP TO TRANSLATE MORE"
+      }
+    }
+  ],
+  "overrides": {
+    "pt": {
+      "hero": {
+        "subtitle": "Desenvolvedor de Full Stack",
+        "description": "Mais do que escrever código, desenvolvo sistemas que resolvem problemas reais. Especializado em Node.js, construo aplicações web modernas, APIs escaláveis e soluções preparadas para crescer.",
+        "skills": "NODE.JS • TYPESCRIPT • rest APIs • WEB SYSTEMS • POSTGRESQL • DOCKER"
+      },
+      "nav": {
+        "home": "inicio"
+      },
+      "about": {
+        "bio_p1": "Meu nome é Kauan Comper e sou desenvolvedor de software apaixonado por transformar ideias em soluções digitais que fazem sentido tanto para quem utiliza quanto para quem as desenvolve.",
+        "bio_p2": "Tenho como principal área de atuação o desenvolvimento full stack com Node.js e o ecossistema JavaScript, criando sistemas web modernos, APIs e aplicações pensadas para serem escaláveis, organizadas e fáceis de evoluir.",
+        "bio_p3": "Mais do que desenvolver funcionalidades, gosto de entender o problema antes de escrever a primeira linha de código. Acredito que um bom software nasce de uma arquitetura bem planejada, de decisões técnicas consistentes e de um código que continue simples mesmo à medida que o projeto cresce.",
+        "bio_p4": "Estou em constante evolução, buscando aperfeiçoar minha forma de desenvolver software e construir soluções cada vez mais robustas, performáticas e sustentáveis. Para mim, programar é unir lógica, criatividade e engenharia para entregar produtos que realmente gerem valor.",
+        "bio_highlight": "\"Um bom software não é apenas aquele que funciona, mas aquele que continua simples, escalável e fácil de evoluir.\"",
+        "skills": [
+          {
+            "category": "Engenharia de Software",
+            "items": [
+              "Node.js",
+              "TypeScript",
+              "Express.js",
+              "REST APIs"
+            ]
+          },
+          {
+            "category": "Desenvolvimento Web",
+            "items": [
+              "React",
+              "Next.js",
+              "JavaScript",
+              "HTML5",
+              "CSS3",
+              "Tailwind CSS"
+            ]
+          },
+          {
+            "category": "Infraestrutura",
+            "items": [
+              "PostgreSQL",
+              "MySQL",
+              "Docker",
+              "Git"
+            ]
+          }
+        ]
+      },
+      "projects": {
+        "description": "Uma coleção de projetos que representam minha forma de desenvolver software: sistemas web modernos, APIs e aplicações full stack construídas com foco em arquitetura, qualidade de código e evolução contínua."
+      },
+      "process": {
+        "description": "Uma abordagem baseada em boas práticas de engenharia de software, onde cada etapa do levantamento de requisitos à entrega da aplicação é planejada para desenvolver sistemas web robustos, escaláveis e de fácil manutenção. O objetivo é criar software de qualidade, com arquitetura consistente e preparado para evoluir junto com as necessidades do projeto.",
+        "steps": [
+          {
+            "id": "01",
+            "title": "ANÁLISE & PLANEJAMENTO",
+            "description": "Compreender o problema é o primeiro passo para construir uma boa solução. Antes de desenvolver, analiso requisitos, objetivos e necessidades para definir a melhor estratégia técnica.",
+            "icon": "Search",
+            "tags": [
+              "ANÁLISE",
+              "ESTRATEGIA"
+            ]
+          },
+          {
+            "id": "02",
+            "title": "ARQUITETURA & MODELAGEM",
+            "description": "Definição da arquitetura da aplicação, modelagem de banco de dados e organização do projeto utilizando boas práticas que garantem escalabilidade e facilidade de manutenção.",
+            "icon": "Layers",
+            "tags": [
+              "DESIGN",
+              "OPERAÇÃO"
+            ]
+          },
+          {
+            "id": "03",
+            "title": "DESENVOLVIMENTO",
+            "description": "Implementação de sistemas web, APIs REST e aplicações full stack com Node.js, priorizando código limpo, desempenho e uma experiência consistente para usuários e desenvolvedores.",
+            "icon": "Code",
+            "tags": [
+              "FRONTEND",
+              "BACKEND"
+            ]
+          },
+          {
+            "id": "04",
+            "title": "TESTES & DEPLOY",
+            "description": "Testes, deploy e evolução contínua da aplicação, garantindo que o software permaneça estável, seguro e preparado para acompanhar o crescimento do projeto.",
+            "icon": "TrendingUp",
+            "tags": [
+              "RESULTADOS",
+              "IA"
+            ]
+          }
+        ]
+      },
+      "recent_works": {
+        "subtitle": "PORTFÓLIO DE SOFTWARE"
+      },
+      "contact": {
+        "description": "Toda grande solução começa com uma boa conversa.\n\nSe você procura um desenvolvedor para criar sistemas web, APIs ou aplicações modernas, ou deseja conversar sobre tecnologia, oportunidades e novos desafios, ficarei feliz em ouvir sua ideia.",
+        "subtitle": "Vamos construir algo juntos?",
+        "email": "mailto:kauancomper.dev@gmail.com",
+        "whatsapp": "https://wa.me/5594992239540"
+      }
+    },
+    "en": {
+      "hero": {
+        "description": "More than writing code, I develop systems that solve real problems. Specializing in Node.js, I build modern web applications, scalable APIs, and growth-ready solutions.",
+        "subtitle": "full stack developer",
+        "skills": "NODE.JS • TYPESCRIPT • rest APIs • WEB SYSTEMS • POSTGRESQL • DOCKER"
+      },
+      "nav": {
+        "home": "home"
+      },
+      "about": {
+        "bio_p1": "My name is Kauan Comper and I am a software developer passionate about turning ideas into digital solutions that make sense for both those who use them and those who develop them.",
+        "bio_p2": "My main area of expertise is full stack development with Node.js and the JavaScript ecosystem, creating modern web systems, APIs and applications designed to be scalable, organized and easy to evolve.",
+        "bio_p3": "More than developing features, I like to understand the problem before writing the first line of code. I believe that good software is born from a well-planned architecture, consistent technical decisions, and code that remains simple even as the project grows.",
+        "bio_p4": "I am constantly evolving, seeking to improve my way of developing software and building increasingly robust, performative and sustainable solutions. For me, programming is combining logic, creativity and engineering to deliver products that really generate value.",
+        "bio_highlight": "“Good software is not just one that works, but one that remains simple, scalable, and easy to evolve.”",
+        "skills": [
+          {
+            "category": "Software Engineering",
+            "items": [
+              "Node.js",
+              "TypeScript",
+              "Express.js",
+              "REST APIs"
+            ]
+          },
+          {
+            "category": "Web Development",
+            "items": [
+              "React",
+              "Next.js",
+              "JavaScript",
+              "HTML5",
+              "CSS3",
+              "Tailwind CSS"
+            ]
+          },
+          {
+            "category": "Infrastructure",
+            "items": [
+              "PostgreSQL",
+              "MySQL",
+              "Docker",
+              "Git"
+            ]
+          }
+        ],
+        "bio_title": "Building the future with code and strategy"
+      },
+      "projects": {
+        "description": "A collection of projects that represent my way of developing software: modern web systems, APIs and full stack applications built with a focus on architecture, code quality and continuous evolution."
+      },
+      "process": {
+        "description": "An approach based on good software engineering practices, where each step from requirements gathering to application delivery is planned to develop robust, scalable and easy-to-maintain web systems. The goal is to create quality software, with consistent architecture and prepared to evolve along with the needs of the project."
+      },
+      "recent_works": {
+        "subtitle": "SOFTWARE PORTFOLIO"
+      },
+      "contact": {
+        "description": "Every great solution starts with a good conversation.\n\nIf you are looking for a developer to build modern web systems, APIs or applications, or want to talk about technology, opportunities and new challenges, I will be happy to hear your idea.",
+        "subtitle": "Shall we build something together?",
+        "email": "mailto:kauancomper.dev@gmail.com",
+        "whatsapp": "https://wa.me/5594992239540"
+      }
+    },
+    "es": {
+      "hero": {
+        "description": "Más que escribir código, desarrollo sistemas que resuelven problemas reales. Especializado en Node.js, creo aplicaciones web modernas, API escalables y soluciones listas para el crecimiento.",
+        "subtitle": "Desarrollador Full Stack",
+        "skills": "NODE.JS • TYPESCRIPT • API REST • SISTEMAS WEB • POSTGRESQL • DOCKER"
+      },
+      "nav": {
+        "home": "home"
+      },
+      "about": {
+        "bio_p1": "Mi nombre es Kauan Comper y soy un desarrollador de software apasionado por convertir ideas en soluciones digitales que tengan sentido tanto para quienes las usan como para quienes las desarrollan.",
+        "bio_p2": "Mi principal área de especialización es el desarrollo de pila completa con Node.js y el ecosistema JavaScript, creando sistemas web modernos, API y aplicaciones diseñadas para ser escalables, organizadas y fáciles de evolucionar.",
+        "bio_p3": "Más que desarrollar funciones, me gusta entender el problema antes de escribir la primera línea de código. Creo que un buen software nace de una arquitectura bien planificada, decisiones técnicas consistentes y un código que sigue siendo simple incluso a medida que el proyecto crece.",
+        "bio_p4": "Estoy en constante evolución, buscando mejorar mi forma de desarrollar software y construir soluciones cada vez más robustas, performativas y sostenibles. Para mí, la programación es combinar la lógica, la creatividad y la ingeniería para ofrecer productos que realmente generen valor.",
+        "bio_highlight": "\"Un buen software no es solo uno que funciona, sino uno que sigue siendo simple, escalable y fácil de evolucionar\".",
+        "skills": [
+          {
+            "category": "Ingeniería de Software",
+            "items": [
+              "Node.js",
+              "TypeScript",
+              "Express.js",
+              "REST APIs"
+            ]
+          },
+          {
+            "category": "Desarrollo Web",
+            "items": [
+              "React",
+              "Next.js",
+              "JavaScript",
+              "HTML5",
+              "CSS3",
+              "Tailwind CSS"
+            ]
+          },
+          {
+            "category": "Infraestructura",
+            "items": [
+              "PostgreSQL",
+              "MySQL",
+              "Docker",
+              "Git"
+            ]
+          }
+        ],
+        "bio_title": "Construyendo el futuro con código y estrategia"
+      },
+      "projects": {
+        "description": "Una colección de proyectos que representan mi forma de desarrollar software: sistemas web modernos, APIs y aplicaciones full stack construidas con un enfoque en la arquitectura, la calidad del código y la evolución continua."
+      },
+      "process": {
+        "description": "Un enfoque basado en buenas prácticas de ingeniería de software, donde cada paso desde la recopilación de requisitos hasta la entrega de aplicaciones se planifica para desarrollar sistemas web robustos, escalables y fáciles de mantener. El objetivo es crear software de calidad, con arquitectura consistente y preparado para evolucionar junto con las necesidades del proyecto.",
+        "steps": [
+          {
+            "id": "01",
+            "title": "ANÁLISIS Y PLANIFICACIÓN",
+            "description": "Comprender el problema es el primer paso para construir una buena solución. Antes de desarrollar, analizo requisitos, objetivos y necesidades para definir la mejor estrategia técnica.",
+            "icon": "Search",
+            "tags": [
+              "ANÁLISIS",
+              "ESTRATEGIA"
+            ]
+          },
+          {
+            "id": "02",
+            "title": "ARQUITECTURA Y MODELADO",
+            "description": "Definición de arquitectura de aplicaciones, modelado de bases de datos y organización de proyectos mediante buenas prácticas que garanticen escalabilidad y facilidad de mantenimiento.",
+            "icon": "Layers",
+            "tags": [
+              "DISEÑO",
+              "OPERACIÓN"
+            ]
+          },
+          {
+            "id": "03",
+            "title": "EVOLUCIÓN",
+            "description": "Implementación de sistemas web, API REST y aplicaciones full stack con Node.js, priorizando código limpio, rendimiento y una experiencia consistente para usuarios y desarrolladores.",
+            "icon": "Code",
+            "tags": [
+              "FRONTEND",
+              "BACKEND"
+            ]
+          },
+          {
+            "id": "04",
+            "title": "PRUEBAS E IMPLEMENTACIÓN",
+            "description": "Pruebas, despliegue y evolución continua de la aplicación, asegurando que el software se mantenga estable, seguro y preparado para seguir el crecimiento del proyecto.",
+            "icon": "TrendingUp",
+            "tags": [
+              "RESULTADOS",
+              "IA"
+            ]
+          }
+        ]
+      },
+      "recent_works": {
+        "subtitle": "CARTERA DE SOFTWARE"
+      },
+      "contact": {
+        "description": "Toda gran solución comienza con una buena conversación.\n\nSi estás buscando un desarrollador para construir sistemas web modernos, APIs o aplicaciones, o quieres hablar de tecnología, oportunidades y nuevos retos, estaré encantado de escuchar tu idea.",
+        "subtitle": "¿Construimos algo juntos?",
+        "email": "mailto:kauancomper.dev@gmail.com",
+        "whatsapp": "https://wa.me/5594992239540"
+      }
+    }
+  }
+}

@@ -230,16 +230,12 @@ export default function Hero() {
         <div className="animate-marquee flex items-center gap-8 w-max">
           {[...Array(4)].map((_, i) => (
             <div key={i} className="flex items-center gap-8 whitespace-nowrap">
-              <span className="text-[10px] font-mono text-white/25 uppercase tracking-[0.2em]">STACK</span>
-              <span className="text-brand-primary-red/35">•</span>
               {c.skills.split(' • ').map((skill, idx) => (
                 <div key={idx} className="flex items-center gap-8">
                   <span className="text-[11px] font-bold text-white/55 uppercase tracking-widest">{skill}</span>
                   <span className="text-brand-primary-red/35">•</span>
                 </div>
               ))}
-              <span className="text-[10px] font-mono text-white/25 uppercase tracking-[0.2em]">ROLE</span>
-              <span className="text-brand-primary-red/35">•</span>
             </div>
           ))}
         </div>

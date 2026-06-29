@@ -109,6 +109,13 @@ export default function RecentWorks() {
                   REPO_DESCRIPTIONS[item.name]?.url ||
                   item.homepage;
 
+                // Prioridade: CMS tools[0] → REPO_DESCRIPTIONS tools[0] → linguagem do GitHub
+                const displayLanguage =
+                  (cms?.tools && cms.tools.length > 0 ? cms.tools[0] : undefined) ||
+                  (REPO_DESCRIPTIONS[item.name]?.tools?.[0]) ||
+                  item.language ||
+                  (language === 'pt' ? 'Geral' : 'General');
+
                 return (
                   <motion.div
                     key={`${item.id}-${index}`}
@@ -131,7 +138,7 @@ export default function RecentWorks() {
                       {/* Language Badge */}
                       <div className="absolute top-6 left-6">
                         <span className="px-4 py-1.5 rounded-full bg-brand-primary-red/10 backdrop-blur-md border border-brand-primary-red/20 text-[10px] font-bold text-brand-secondary-red uppercase tracking-wider">
-                          {item.language || (language === 'pt' ? 'Geral' : 'General')}
+                          {displayLanguage}
                         </span>
                       </div>
                     </div>
