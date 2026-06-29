@@ -47,7 +47,7 @@ export default function Hero() {
   const secondaryMag = useMagnetic<HTMLAnchorElement>(0.28);
 
   return (
-    <section className="relative h-screen flex flex-col overflow-hidden">
+    <section className="relative min-h-[100svh] lg:h-screen flex flex-col overflow-hidden">
 
       {/* Matrix Rain */}
       <div className="absolute inset-0 z-0">
@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
 
       {/* ── Grid de duas colunas — ocupa o espaço disponível entre header e marquee ── */}
-      <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-8 lg:gap-12 px-6 lg:px-12 pt-24 pb-6 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 lg:gap-12 px-6 lg:px-12 pt-24 pb-6 max-w-7xl mx-auto w-full">
 
         {/* ── COLUNA ESQUERDA ── */}
         <div className="flex flex-col justify-between gap-4">
@@ -139,59 +139,60 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="hidden lg:block relative rounded-3xl overflow-hidden"
+          className="relative rounded-2xl lg:rounded-3xl overflow-hidden min-h-[220px] sm:min-h-[260px] lg:min-h-0"
         >
-          {/* Foto */}
+          {/* Foto — desktop only */}
           <img
             src={processPhoto}
             alt="Kauan Comper"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="hidden lg:block absolute inset-0 w-full h-full object-cover object-top"
           />
 
-          {/* Camadas de fusão */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
-          {/* Tint vermelho sutil — integra ao brand */}
-          <div className="absolute inset-0 bg-gradient-to-br from-brand-primary-red/6 via-transparent to-transparent" style={{ mixBlendMode: 'screen' }} />
+          {/* Camadas de fusão — desktop only */}
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/10" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/50" />
+          <div className="hidden lg:block absolute inset-0 bg-gradient-to-br from-brand-primary-red/6 via-transparent to-transparent" style={{ mixBlendMode: 'screen' }} />
 
-          {/* Linha de scan animada */}
+          {/* Mobile: fundo escuro sutil para o terminal */}
+          <div className="block lg:hidden absolute inset-0 bg-white/[0.03] border border-white/[0.08] rounded-2xl" />
+
+          {/* Linha de scan animada — desktop only */}
           <motion.div
-            className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-primary-red/25 to-transparent pointer-events-none"
+            className="hidden lg:block absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-brand-primary-red/25 to-transparent pointer-events-none"
             animate={{ top: ['15%', '80%', '15%'] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
           />
 
-          {/* Cantos estilo viewfinder */}
-          <div className="absolute top-5 left-5 pointer-events-none">
+          {/* Cantos estilo viewfinder — desktop only */}
+          <div className="hidden lg:block absolute top-5 left-5 pointer-events-none">
             <div className="w-6 h-[2px] bg-brand-primary-red/60" />
             <div className="w-[2px] h-6 bg-brand-primary-red/60 mt-[-2px]" />
           </div>
-          <div className="absolute top-5 right-5 pointer-events-none">
+          <div className="hidden lg:block absolute top-5 right-5 pointer-events-none">
             <div className="w-6 h-[2px] bg-brand-primary-red/60 ml-auto" />
             <div className="w-[2px] h-6 bg-brand-primary-red/60 ml-auto mt-[-2px]" />
           </div>
 
-
-          {/* Glow vermelho projetado atrás do terminal */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-28 bg-brand-primary-red/12 blur-[50px] pointer-events-none" />
+          {/* Glow vermelho — desktop only */}
+          <div className="hidden lg:block absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-28 bg-brand-primary-red/12 blur-[50px] pointer-events-none" />
 
           {/* Terminal flutuante com animação */}
           <motion.div
             animate={{ y: [0, -4, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute bottom-0 left-0 right-0 p-4"
+            className="absolute bottom-0 left-0 right-0 p-3 lg:p-4"
           >
-            <div className="bg-black/80 backdrop-blur-2xl border border-white/[0.12] rounded-2xl overflow-hidden shadow-[0_-8px_40px_rgba(0,0,0,0.7),0_0_0_1px_rgba(239,68,68,0.06)]">
+            <div className="bg-black/80 backdrop-blur-2xl border border-white/[0.12] rounded-xl lg:rounded-2xl overflow-hidden shadow-[0_-8px_40px_rgba(0,0,0,0.7),0_0_0_1px_rgba(239,68,68,0.06)]">
               {/* Barra do terminal */}
-              <div className="flex items-center gap-2 px-4 py-2.5 border-b border-white/[0.06] bg-white/[0.02]">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
-                <div className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
-                <span className="ml-auto text-[9px] font-mono text-white/20 uppercase tracking-widest">kauan@portfolio</span>
+              <div className="flex items-center gap-2 px-3 lg:px-4 py-2 lg:py-2.5 border-b border-white/[0.06] bg-white/[0.02]">
+                <div className="w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full bg-[#FF5F57]" />
+                <div className="w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full bg-[#FFBD2E]" />
+                <div className="w-2 h-2 lg:w-2.5 lg:h-2.5 rounded-full bg-[#28C840]" />
+                <span className="ml-auto text-[8px] lg:text-[9px] font-mono text-white/20 uppercase tracking-widest">kauan@portfolio</span>
               </div>
 
               {/* Linhas */}
-              <div className="px-5 py-4 font-mono grid grid-cols-2 gap-x-6 gap-y-1.5">
+              <div className="px-3 lg:px-5 py-3 lg:py-4 font-mono grid grid-cols-2 gap-x-4 lg:gap-x-6 gap-y-1 lg:gap-y-1.5">
                 {([
                   ['text-brand-secondary-red', '$ whoami', 'text-white/50', '→ Kauan Comper'],
                   ['text-brand-secondary-red', '$ role', 'text-white/50', '→ Dev Sistemas & IA'],
@@ -202,12 +203,12 @@ export default function Hero() {
                     <motion.span
                       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                       transition={{ delay: 0.7 + i * 0.25, duration: 0.3 }}
-                      className={`${c1} text-[10px]`}
+                      className={`${c1} text-[9px] lg:text-[10px]`}
                     >{l1}</motion.span>
                     <motion.span
                       initial={{ opacity: 0 }} animate={{ opacity: 1 }}
                       transition={{ delay: 0.85 + i * 0.25, duration: 0.3 }}
-                      className={`${c2} text-[10px]`}
+                      className={`${c2} text-[9px] lg:text-[10px]`}
                     >{l2}</motion.span>
                   </Fragment>
                 ))}
